@@ -165,6 +165,18 @@ This repository is packaged for the open agent skills ecosystem. The supported i
 npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development
 ```
 
+For global installs, specify the target agent explicitly:
+
+```bash
+npx skills add -g Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent codex -y
+```
+
+Avoid non-interactive global installs without `--agent`, such as `npx skills add -g ... -y`. In `skills@1.5.14`, that fallback can target every known agent, including project-only agents such as PromptScript. PromptScript has no global install path, so the CLI may report `Failed to install 1` even after installing successfully for the other agents. Install PromptScript project-locally instead:
+
+```bash
+npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent promptscript -y
+```
+
 Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the package without installing. Do not depend on a Hermes-only shell installer; `npx skills` is the supported install path.
 
 ## Source Provenance Quick Links
@@ -178,4 +190,3 @@ Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the packag
 - When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Verify syntax, generated output invariants, determinism when applicable, English-only persisted output, and `git diff --check`; remove the verifier after the run and report it as ad-hoc verification.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
 - `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
-

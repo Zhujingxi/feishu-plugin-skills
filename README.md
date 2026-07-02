@@ -12,17 +12,24 @@ This repository is meant to be installed with the open agent skills CLI from `ve
 npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development
 ```
 
-Install globally instead of into the current project:
+Install globally for a specific agent:
 
 ```bash
-npx skills add -g Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development -y
+npx skills add -g Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent codex -y
 ```
 
-Install for a specific supported agent:
+Install for one or more specific supported agents:
 
 ```bash
 npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent claude-code
 npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent codex
+npx skills add -g Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent codex claude-code opencode gemini-cli -y
+```
+
+Avoid running a non-interactive global install without `--agent`, such as `npx skills add -g ... -y`. In `skills@1.5.14`, that fallback can target every known agent, including project-only agents such as PromptScript. PromptScript has no global install path, so the CLI may finish with `Failed to install 1` even after installing the skill successfully for the other agents. For PromptScript, use a project-local install instead:
+
+```bash
+npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development --agent promptscript -y
 ```
 
 List the skills exposed by this repository without installing:
