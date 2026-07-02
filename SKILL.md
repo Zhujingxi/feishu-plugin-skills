@@ -162,6 +162,7 @@ Use `references/verification-checklist.md` for the complete review checklist and
 - Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations.
 - Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
 - Use `references/client-docs-source-catalog.md` as a generated locator for the full official client documentation tree.
+- To refresh the generated catalog, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
 - `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
 
