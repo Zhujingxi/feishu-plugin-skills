@@ -4,7 +4,7 @@ Portable SKILL.md-compatible guidance for Feishu/Lark Open Platform and plugin d
 
 This skill helps an AI coding agent decide whether a task should be implemented as a Feishu/Lark in-client plugin surface or as a server/API automation, then points the agent at the right reference module.
 
-The main `SKILL.md` is intentionally self-contained for OpenCode, Codex, and other coding agents that may not reliably browse Feishu/Lark documentation during a run. Reference files preserve deeper module details and source provenance, but the common implementation workflows are copied into the main skill so an agent can still classify, scaffold, secure, and verify work offline.
+The main `SKILL.md` is intentionally self-contained for OpenCode, Codex, and other coding agents that may not reliably browse Feishu/Lark documentation during a run. Reference files preserve deeper module details, source provenance, and a mirrored copy of official markdown documentation so an agent can classify, scaffold, secure, verify, search, and inspect source docs offline.
 
 ## Install with Vercel Skills CLI
 
@@ -57,7 +57,9 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 - `SKILL.md` — self-contained coding-agent guide with classification workflow, implementation cheat sheets, debugging playbook, and quick guidance.
 - `skills.sh.json` — Vercel Skills CLI metadata/grouping for this repository.
 - `references/client-docs-overview.md` — organized Feishu/Lark Developer Guides + Client API crawl overview and source anchors.
-- `references/client-docs-source-catalog.md` — generated full source locator for the official client documentation tree.
+- `references/client-docs-source-catalog.md` — generated full source locator for the official client documentation tree, with local mirror paths.
+- `references/client-docs-mirror-index.json` — machine-readable source URL to local mirrored markdown lookup.
+- `references/client-docs-mirror/` — mirrored official markdown page content for local search and offline access.
 - `references/open-platform-fundamentals.md` — app model, credentials, permissions, tokens, events, and Web App basics.
 - `references/base-bitable-extensions.md` — Base/Bitable table view, record view, automation action, and `opdev` workflows.
 - `references/cloud-docs-and-apis.md` — Docx, Sheets, Drive, Wiki, Bitable REST, import/export, SDK/CLI/MCP workflows.
@@ -65,7 +67,7 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 - `references/feishu-project-plugins.md` — Feishu Project plugin workflows using `@lark-project/cli` / `lpm`.
 - `references/source-provenance.md` — source inventory and known documentation limits.
 - `references/verification-checklist.md` — review checklist before shipping Feishu/Lark work.
-- `scripts/crawl_client_docs.py` — regenerates the official client-docs source catalog.
+- `scripts/crawl_client_docs.py` — regenerates the official client-docs source catalog and local markdown mirror.
 
 ## Supported source formats
 

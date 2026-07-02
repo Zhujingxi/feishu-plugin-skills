@@ -293,7 +293,7 @@ A Feishu/Lark implementation or skill update is not ready until the relevant che
 - Confirm frontmatter stays valid and support files remain under allowed directories such as `references/`, `templates/`, `scripts/`, or `assets/`.
 - Confirm no secrets, tokens, private keys, tenant/user identifiers, or raw PII were added to persisted skill artifacts.
 - Confirm persisted skill/repo artifacts remain English-only.
-- Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs and long source inventories in `references/`.
+- Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs, mirrored upstream docs, and long source inventories in `references/`.
 - For generic open-agent distribution, verify from the repo root:
 
 ```bash
@@ -329,9 +329,11 @@ Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the packag
 
 - Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations.
 - Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
-- Use `references/client-docs-source-catalog.md` as a generated locator for the full official client documentation tree.
-- To refresh the generated catalog, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
-- For generated documentation catalogs, keep the skill as a locator and routing guide, not a full upstream mirror. Preserve complete official URL coverage in `references/client-docs-source-catalog.md`, summarize practical workflows in module references, and send agents back to official pages for exact API parameters.
+- Use `references/client-docs-source-catalog.md` to map official pages to mirrored local markdown files.
+- Use `references/client-docs-mirror-index.json` for machine-readable source URL -> local file lookup.
+- Use `references/client-docs-mirror/` for mirrored official markdown page content when live documentation access is unreliable.
+- To refresh the generated catalog and mirror, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
+- The mirror stores official page content for local search/access. Still re-check live docs before production release when exact current API parameters, CLI templates, or console labels are high-risk.
 - Persisted skill artifacts must remain English-only. If upstream paths or titles contain CJK or other non-ASCII text, percent-encode URL/path segments or use escaped string literals in scripts.
 - When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Verify syntax, generated output invariants, determinism when applicable, English-only persisted output, and `git diff --check`; remove the verifier after the run and report it as ad-hoc verification.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.

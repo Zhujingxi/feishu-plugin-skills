@@ -1,6 +1,6 @@
 # Feishu/Lark Client Documentation Overview
 
-This reference organizes the official Feishu/Lark client-side documentation that starts from `https://open.feishu.cn/document/client-docs/intro`. It is intentionally written as an agent routing guide rather than a copied documentation mirror. For exact parameter names, SDK versions, UI labels, and release rules, open the official source page linked here or use `references/client-docs-source-catalog.md`.
+This reference organizes the official Feishu/Lark client-side documentation that starts from `https://open.feishu.cn/document/client-docs/intro`. It is an agent routing guide plus pointers into the local mirrored markdown documentation. For exact parameter names, SDK versions, UI labels, and release rules, search `references/client-docs-mirror/`, use `references/client-docs-source-catalog.md`, and re-open the live official source when production freshness matters.
 
 ## Crawl coverage
 
@@ -12,6 +12,8 @@ The current refresh used the official Open Platform documentation directory endp
 - Pages discovered in those roots: 1,805
 - Markdown pages fetched during the crawl before the network pass was stopped: 1,684
 - Full generated index: `references/client-docs-source-catalog.md`
+- Machine-readable mirror index: `references/client-docs-mirror-index.json`
+- Mirrored markdown root: `references/client-docs-mirror/`
 
 The official directory uses opaque historical paths such as `/uAjLw4CM/...`; the visible English/Chinese site route may show `client-docs/...`. Prefer the official URL from the catalog, then use the `.md` variant when extracting clean markdown.
 
@@ -56,13 +58,13 @@ Client API roots include:
 ## Recommended investigation workflow
 
 1. Classify the requested user experience by host product: chat, H5 app, Docs, Base, Workplace, link preview, card, or backend-only.
-2. Open the matching guide area in `references/client-docs-source-catalog.md`.
+2. Search the matching guide area in `references/client-docs-source-catalog.md` or `references/client-docs-mirror/`.
 3. Load only the matching module reference:
    - Base extension: `references/base-bitable-extensions.md`
    - Client surfaces: `references/client-components.md`
    - Open Platform app/auth/release: `references/open-platform-fundamentals.md`
    - Server Docs/API automation: `references/cloud-docs-and-apis.md`
-4. Verify exact CLI package, generated template structure, app capability name, permission scope, and source domain in official docs before coding.
+4. Use the mirrored markdown for local lookup, then verify exact CLI package, generated template structure, app capability name, permission scope, and source domain in live official docs before production release.
 5. For every frontend/plugin surface, draw a hard line between client bundle and backend: app secrets, token exchange, privileged OpenAPI calls, and long-lived tokens stay backend-side.
 6. Verify in a real tenant and product surface before handing off.
 
@@ -91,8 +93,8 @@ Use these anchors to start a focused re-check:
 
 ## Notes for agents
 
-- Treat the catalog as a locator. Do not load the whole catalog unless you are searching for a specific page.
-- The official docs expose `.md` pages for many URLs. Prefer `.md` extraction for clean text when available.
+- Treat the catalog as a locator and the mirror as the searchable local documentation store. Do not load the whole catalog or mirror unless you are searching for a specific page.
+- The official docs expose `.md` pages for many URLs; the mirror stores those markdown pages under ASCII-safe paths.
 - The directory contains not-recommended and historical sections. Do not scaffold new Mini Program/Gadget or historical card work unless the user explicitly asks for legacy maintenance.
 - If a page has both Feishu and Lark variants, use the variant matching the tenant and console domain.
 - Names drift: Base/Bitable, Block/widget, Docs add-on/document widget, and Card/CardKit may vary by locale and product generation. Confirm labels in the target Developer Console.
