@@ -4,6 +4,8 @@ Portable SKILL.md-compatible guidance for Feishu/Lark Open Platform and plugin d
 
 This skill helps an AI coding agent decide whether a task should be implemented as a Feishu/Lark in-client plugin surface or as a server/API automation, then points the agent at the right reference module.
 
+The main `SKILL.md` is intentionally self-contained for OpenCode, Codex, and other coding agents that may not reliably browse Feishu/Lark documentation during a run. Reference files preserve deeper module details and source provenance, but the common implementation workflows are copied into the main skill so an agent can still classify, scaffold, secure, and verify work offline.
+
 ## Install with Vercel Skills CLI
 
 This repository is meant to be installed with the open agent skills CLI from `vercel-labs/skills`.
@@ -52,7 +54,7 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 
 ## What is included
 
-- `SKILL.md` — main routing skill with classification workflow and quick guidance.
+- `SKILL.md` — self-contained coding-agent guide with classification workflow, implementation cheat sheets, debugging playbook, and quick guidance.
 - `skills.sh.json` — Vercel Skills CLI metadata/grouping for this repository.
 - `references/client-docs-overview.md` — organized Feishu/Lark Developer Guides + Client API crawl overview and source anchors.
 - `references/client-docs-source-catalog.md` — generated full source locator for the official client documentation tree.

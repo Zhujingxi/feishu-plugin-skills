@@ -138,6 +138,152 @@ Before coding, classify the requested capability. Do not scaffold until these an
 | Official SDKs | Java, Python, Go, Node | Server-side API integrations and token flows | `references/cloud-docs-and-apis.md` |
 | OpenAPI MCP | `larksuite/lark-openapi-mcp` | Exposing Feishu/Lark APIs to MCP-capable AI tools | `references/cloud-docs-and-apis.md` |
 
+
+## OpenCode/Codex Agent Operating Rules
+
+This skill is optimized for coding agents that may not reliably open external links. Treat the local skill files as the working knowledge base, and use the official URLs as source anchors to re-check only when network/browser access is available.
+
+1. Do not start from a blank custom implementation. First classify the surface, then scaffold from the current official CLI/template for that surface.
+2. Do not assume every Feishu/Lark task is a plugin. Backend CRUD, import/export, synchronization, and AI-agent document operations are server API integrations unless an in-client UI surface is explicitly built.
+3. Prefer local references over live browsing when the agent is blocked by documentation pages. Use this `SKILL.md` for the common path and the module references for deeper details.
+4. If exact API parameters, current console labels, or generated template layouts matter, re-check the official docs or Developer Console before final release; the local skill captures best-practice workflow, not every versioned field.
+5. Keep secrets out of the repository and out of generated frontend bundles. App Secret, tenant tokens, user tokens, refresh tokens, and private tenant/user IDs belong in environment variables or a backend secret store.
+6. Verify with real execution whenever possible: CLI account check, scaffold/build/test command, upload/release command, API request against a disposable resource, or in-client screenshot/recorded result.
+7. Record practical handoff facts in project-local docs: chosen surface, tenant domain, app/capability IDs, scopes, resource grants, request IDs/log IDs, test resource, and remaining manual console steps. Do not record secrets.
+
+If the user's request is ambiguous, make the smallest safe assumption only for exploration. For implementation, stop and ask for the missing tenant/app/resource decision rather than building the wrong surface.
+
+## Self-Contained Implementation Cheat Sheets
+
+Use these condensed workflows when a coding agent cannot or should not fetch external pages. Load the module reference for the selected surface when more detail is needed.
+
+### Open Platform app and permissions
+
+- The Open Platform app is the top-level container for credentials, capabilities, permissions, releases, bots, events, Web App/H5, blocks/widgets, link preview, and plugin surfaces.
+- Choose distribution early: self-built/internal app for one tenant; marketplace/store app for public multi-tenant distribution. Store apps have stricter review and capability caveats.
+- Token identity controls resource visibility:
+  - `tenant_access_token`: app identity in a tenant; good for backend automation, app-owned cloud space, bot-added documents, and resources shared with the app.
+  - `user_access_token`: a specific user identity; good for user-owned resources and collaborator permissions.
+  - `app_access_token`: store-app management flows.
+- Permissions have two layers: Developer Console scopes and resource-level grants. A scope alone often cannot access a user-owned Docs/Sheets/Base resource.
+- For tenant-token access to user documents, enable Bot capability and have the owner add/share the app on the target document/Base/folder with the needed permission.
+- Permission error `99991672` often includes `permission_violations`; inspect it to find missing scopes.
+- Capture Feishu error payloads and the `X-Tt-Logid` response header when debugging API calls.
+
+### Base/Bitable extensions
+
+Use Base/Bitable extensions only when the user needs UI or workflow logic inside Base. Use server APIs for backend data CRUD without embedded UI.
+
+- Table/Data Table View: table-level visualization, dashboards, maps, print layouts.
+- Record View: one-record previews, enrichment panels, order/contract summaries.
+- Automation Action: workflow execution without persistent UI, such as OCR, AI extraction, enrichment, external API calls, and notifications.
+
+Toolchain and scaffold:
+
+```bash
+npm install @lark-opdev/cli@latest -g -f
+opdev login
+opdev whoami
+opdev create ${app_dir}/${view_dir} -a bitable-extensions -s table-view
+opdev create ${app_dir}/${view_dir} -a bitable-extensions -s record-view
+opdev create ${app_dir}/${action_dir} -a bitable-extensions -s automated-action
+cd ${app_dir}/${view_or_action_dir}
+npm install
+npm run start      # UI debugging when provided
+npm run test       # automation action execute() simulation when provided
+npm run upload     # or opdev upload ./dist
+```
+
+Critical files and pitfalls:
+
+- `app.json` must contain the correct app ID.
+- `block.json` must contain the exact capability-specific `blockTypeID`. Table view, record view, and automation action IDs are not interchangeable.
+- Confirm CLI account, tenant, and environment with `opdev whoami` before upload.
+- Configure server/domain allowlists before network calls.
+- Typical SDK package for UI extensions: `@lark-opdev/block-bitable-api`.
+- Automation actions use `@lark-opdev/block-basekit-server-api`, register via `basekit.addAction()`, implement `execute(args, context)`, and must return a value matching `resultType`.
+- Automation actions should use `context.fetch` for external HTTP calls; avoid axios/got in the sandbox. Known sandbox-sensitive packages include axios, got, bcrypt, moment, jsdom, and sharp.
+- Extracted sandbox limits include under 1 GB memory and request concurrency at most 400; verify current limits before production.
+- Upload is not enough: select the uploaded block version in Developer Console, fill icon/name/description/localization, create an app version, submit release/review, then verify in a real Base.
+
+### Cloud Docs, Sheets, Drive, Wiki, and Bitable server APIs
+
+Use server APIs when the deliverable manipulates resources but does not require embedded Feishu/Lark UI.
+
+Common identifiers:
+
+- Drive folder/file: `folder_token`, `file_token`, `root_token`.
+- Docx: `document_id`; legacy docs may use `doc_token`.
+- Sheets: `spreadsheet_token`, `sheet_id`, ranges such as `Sheet1!A1:D10`.
+- Bitable/Base: `app_token`, `table_id`, `view_id`, `record_id`, `field_id`.
+- Wiki: `space_id`, `node_token`, `obj_token`; wiki pages may require resolving the underlying resource token.
+
+Common endpoint families:
+
+- Docx: create document, list blocks, create child blocks, update blocks, batch-delete child blocks.
+- Sheets: create spreadsheet, get metadata, query sheets, read/write ranges, batch update ranges.
+- Bitable: create app, list/create tables, list/create fields, query/search/list records, create/update/delete records, batch operations.
+- Drive: create folder/document, upload/download, file metadata, list folder children, copy/move/delete, import/export tasks.
+
+Implementation rules:
+
+1. Parse the resource token from the URL and classify the product.
+2. Decide `tenant_access_token` vs `user_access_token`.
+3. Apply minimal scopes and configure resource-level access.
+4. Use official SDKs or direct HTTP with token caching, retry/backoff, pagination, and async polling.
+5. Prefer Query Records over historical List Records for Bitable filtering/search when it satisfies the task.
+6. Serialize writes to the same Bitable table; same-table concurrent writes can trigger conflict/readiness errors.
+7. Use uuidv4 `client_token` idempotency keys for retried create-record calls.
+8. Upload media/material before referencing attachment fields.
+9. Import/export cloud documents through async import/export tasks; do not treat online documents as ordinary downloadable Drive files.
+10. Log request IDs/error payloads and verify on a disposable real resource.
+
+Known extracted constraints to re-check against current docs: Create Bitable app around 20 requests/minute; create record around 50 requests/second; list/query records page size up to 500; same table writes should not be concurrent; batch add up to 500 records; Bitable table plus dashboard count around 100, views around 200, records around 20,000.
+
+### Web App/H5 and client components
+
+Use client components only when the user needs an in-client product surface.
+
+- Web App/H5: full custom page inside Feishu/Lark; serve over HTTPS; configure homepage/redirect URLs; implement JSAPI signature and login-free identity exchange through backend when needed.
+- Docs add-on/cloud document widget: document-side UI, slash/menu/floating/modal/embedded flows; configure `app.json`, security/domain allowlists, document-bound or backend storage, and Docs add-on client APIs.
+- Workplace Block: workbench tile/dashboard/quick action; use official block tools and framework structure; verify lifecycle, refresh, storage, network, navigation, and open abilities in the real client.
+- Link Preview: rich preview for pasted/opened URLs; implement server-side callback verification and avoid leaking private data.
+- Feishu Cards/CardKit: interactive messages in chat/bot notifications; choose CardKit/template builder or direct card JSON; configure callbacks for buttons/forms/selectors; test rendering across theme/language/screen size.
+- Legacy Gadget/Mini Program material should be avoided for new development unless explicitly maintaining existing code.
+
+Client-surface security rules:
+
+- Client bundles can use safe client/container APIs, but protected OpenAPI calls and token exchange must go through a backend over HTTPS.
+- JSAPI availability differs by H5, Docs add-on, Base extension, Workplace Block, client version, and tenant. If an API is undefined, first verify the host surface and capability.
+- Local browser success is not enough; verify inside the Feishu/Lark client.
+
+### Feishu Project plugins
+
+Feishu Project plugins are separate from Open Platform/Base extensions. Use `@lark-project/cli` / `lpm`, not `opdev`.
+
+Common extension points include detail pages, navigation pages, list/table views, table column widgets, form or node widgets, field types, node scheduling, plugin config pages, action buttons, event listeners/interceptors, automation triggers/actions, and MCP server integration for AI Agent services.
+
+Workflow:
+
+```bash
+npm i -g @lark-project/cli
+lpm start
+# build and debug in the real Project client
+lpm release
+```
+
+Before `lpm start`, enable local debugging in the Feishu Project plugin detail page. Route protected Project OpenAPI calls through a backend, use HTTPS for external APIs, and verify the released version in the real Feishu Project client.
+
+## Debugging Playbook
+
+- Wrong surface: if the work is just CRUD/import/export/sync, switch to server APIs. If a persistent in-client UI is required, pick Base, Docs, Workplace, H5, Cards, Link Preview, or Project explicitly.
+- Permission denied: check scopes, approval state, token identity, resource sharing, advanced permissions, and whether the app/bot has been added to the target document/Base/folder.
+- CLI upload/release fails: check active account/tenant/environment, app ID, capability ID, semantic version, icon/name/localization metadata, and console release requirements.
+- Base automation fails at runtime: check sandbox packages, use `context.fetch`, validate `resultType`, return shape, i18n keys, and declared permissions.
+- JSAPI/client API undefined: check host surface, capability enablement, domain/security allowlist, client version, and whether the API is H5-only, Docs-add-on-only, Base-only, or Block-only.
+- API data mismatch: log Feishu error body and `X-Tt-Logid`; inspect token identity and resource token type; for Wiki resources, resolve object tokens as needed.
+- Local works but client fails: check HTTPS, CSP/domain allowlist, mixed content, client version, target tenant, and real resource permissions.
+
 ## Verification Checklist
 
 A Feishu/Lark implementation or skill update is not ready until the relevant checks pass:
@@ -147,7 +293,7 @@ A Feishu/Lark implementation or skill update is not ready until the relevant che
 - Confirm frontmatter stays valid and support files remain under allowed directories such as `references/`, `templates/`, `scripts/`, or `assets/`.
 - Confirm no secrets, tokens, private keys, tenant/user identifiers, or raw PII were added to persisted skill artifacts.
 - Confirm persisted skill/repo artifacts remain English-only.
-- Confirm the main `SKILL.md` remains a routing document: principles, prerequisites, module index, classification, and quick checks only. Put deep module details in `references/`.
+- Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs and long source inventories in `references/`.
 - For generic open-agent distribution, verify from the repo root:
 
 ```bash
