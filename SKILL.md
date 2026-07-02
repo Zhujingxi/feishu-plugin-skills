@@ -157,12 +157,25 @@ npx --yes skills use . --skill feishu-plugin-development --full-depth
 
 Use `references/verification-checklist.md` for the complete review checklist and `references/source-provenance.md` for claim-to-source mapping.
 
+## Installation and Portability
+
+This repository is packaged for the open agent skills ecosystem. The supported install method is the Vercel Skills CLI:
+
+```bash
+npx skills add Zhujingxi/feishu-plugin-skills --skill feishu-plugin-development
+```
+
+Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the package without installing. Do not depend on a Hermes-only shell installer; `npx skills` is the supported install path.
+
 ## Source Provenance Quick Links
 
 - Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations.
 - Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
 - Use `references/client-docs-source-catalog.md` as a generated locator for the full official client documentation tree.
 - To refresh the generated catalog, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
+- For generated documentation catalogs, keep the skill as a locator and routing guide, not a full upstream mirror. Preserve complete official URL coverage in `references/client-docs-source-catalog.md`, summarize practical workflows in module references, and send agents back to official pages for exact API parameters.
+- Persisted skill artifacts must remain English-only. If upstream paths or titles contain CJK or other non-ASCII text, percent-encode URL/path segments or use escaped string literals in scripts.
+- When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Verify syntax, generated output invariants, determinism when applicable, English-only persisted output, and `git diff --check`; remove the verifier after the run and report it as ad-hoc verification.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
 - `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
 

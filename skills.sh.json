@@ -1,0 +1,10 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Productivity",
+      "description": "Skills for Feishu/Lark Open Platform, client plugins, documents, and Base/Bitable development.",
+      "skills": ["feishu-plugin-development"]
+    }
+  ]
+}
