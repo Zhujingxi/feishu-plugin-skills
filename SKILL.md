@@ -24,8 +24,9 @@ How agents should use this skill:
 
 1. Start with the classification checklist and surface decision tree before editing code.
 2. Use the module index below to load only the relevant detailed reference for the selected Feishu/Lark surface.
-3. Use `references/source-provenance.md` to map important claims to source URLs and known extraction limits.
-4. Use `references/verification-checklist.md` before handing off a Feishu/Lark implementation or skill update.
+3. Use `references/client-docs-overview.md` when a task touches Feishu/Lark client-side surfaces or when the user asks for official client documentation coverage.
+4. Use `references/source-provenance.md` to map important claims to source URLs and known extraction limits.
+5. Use `references/verification-checklist.md` before handing off a Feishu/Lark implementation or skill update.
 
 Primary provenance is summarized in `references/source-provenance.md`, with a review checklist in `references/verification-checklist.md`. Detailed implementation notes are split by module under `references/` so OpenCode, Codex, and other coding agents can load the smallest useful context. The original workspace research files are not required at runtime; the actionable workflows below are self-contained for triage, implementation planning, and review.
 
@@ -78,6 +79,7 @@ Use this section as the routing table for coding agents. Keep `SKILL.md` as the 
 
 | Module | Use when the task is about | General principle | Detailed reference |
 |---|---|---|---|
+| Client Documentation Overview | Official client-docs crawl map, Developer Guides and Client API coverage, source anchors | Start here when the task asks for Feishu/Lark client docs completeness or when choosing between H5, Docs add-on, Base, Workplace, cards, and link preview. | `references/client-docs-overview.md`, `references/client-docs-source-catalog.md` |
 | Open Platform Fundamentals | App model, self-built vs store apps, credentials, token identity, permissions, events, Web App/H5 basics | An Open Platform app is the capability and permission container; choose distribution, identity, scopes, resource grants, and event transport before coding. | `references/open-platform-fundamentals.md` |
 | Base/Bitable Extensions | Table view, record view, automation action, Base UI extensions, `opdev` upload/debug | If the user needs UI or workflow logic inside Base, use a Base extension; if they only need data CRUD, use server APIs instead. | `references/base-bitable-extensions.md` |
 | Cloud Docs and Server APIs | Docx, Sheets, Drive, Wiki, Bitable REST, import/export, backend automation, SDK/CLI/MCP operations | Server APIs manipulate resources without creating an embedded Feishu/Lark UI; select token identity and resource grants first. | `references/cloud-docs-and-apis.md` |
@@ -157,5 +159,9 @@ Use `references/verification-checklist.md` for the complete review checklist and
 
 ## Source Provenance Quick Links
 
-Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations. Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material. `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
+- Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations.
+- Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
+- Use `references/client-docs-source-catalog.md` as a generated locator for the full official client documentation tree.
+- Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
+- `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
 

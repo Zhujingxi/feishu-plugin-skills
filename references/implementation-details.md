@@ -6,6 +6,7 @@ This file is a compatibility index. The main `SKILL.md` now serves as the genera
 
 | Need | Load |
 |---|---|
+| Official Developer Guides and Client API crawl overview, source anchors, full client-docs catalog | `references/client-docs-overview.md`, `references/client-docs-source-catalog.md` |
 | Open Platform app model, credentials, tokens, permissions, events, Web App/H5 basics | `references/open-platform-fundamentals.md` |
 | Base/Bitable table view, record view, automation action extensions and `opdev` workflows | `references/base-bitable-extensions.md` |
 | Cloud Docs, Docx, Sheets, Drive, Wiki, Bitable REST APIs, import/export, server integrations | `references/cloud-docs-and-apis.md` |

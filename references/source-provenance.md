@@ -24,6 +24,17 @@ This file records the sources used to synthesize the skill. Local workspace note
 - Browser follow-up extracts under `browser-extracts/*.md`
 - Seed extraction files under `sources/seed-*.md`
 
+## 2026-07 client documentation crawl
+
+A refreshed crawl started from `https://open.feishu.cn/document/client-docs/intro` and used the official documentation directory endpoint `https://open.feishu.cn/api/tools/docment/directory_list`.
+
+Generated skill references:
+
+- `references/client-docs-overview.md` — organized English overview of the Feishu/Lark Developer Guides and Client API roots, including official source anchors and routing guidance.
+- `references/client-docs-source-catalog.md` — generated full locator for the official client documentation tree. It indexes 1,805 discovered document pages under Developer Guides and Client API roots.
+
+The crawl showed that client-side/plugin work spans Web App/H5, Docs add-ons, Base/Bitable extensions, Workplace Blocks, link preview, Feishu Cards/CardKit, Client APIs, developer tools, and deprecated Gadget/Mini Program material. Deprecated/historical pages remain in the catalog for discoverability but should not be used for new development unless the user explicitly requests legacy maintenance.
+
 ## Browser-extracted official docs
 
 The follow-up browser extraction recovered official page content that normal extraction previously missed. Local files:

@@ -7,7 +7,9 @@ This skill helps an AI coding agent decide whether a task should be implemented 
 ## What is included
 
 - `SKILL.md` — main routing skill with classification workflow and quick guidance.
-- `references/open-platform-fundamentals.md` — app model, credentials, scopes, tokens, events, Web App/H5 basics.
+- `references/client-docs-overview.md` — organized Feishu/Lark Developer Guides + Client API crawl overview and source anchors.
+- `references/client-docs-source-catalog.md` — generated full source locator for the official client documentation tree.
+- `references/open-platform-fundamentals.md` — app model, credentials, permissions, tokens, events, and Web App basics.
 - `references/base-bitable-extensions.md` — Base/Bitable table view, record view, automation action, and `opdev` workflows.
 - `references/cloud-docs-and-apis.md` — Docx, Sheets, Drive, Wiki, Bitable REST, import/export, SDK/CLI/MCP workflows.
 - `references/client-components.md` — Workplace Blocks, Docs add-ons, document widgets, and client UI surfaces.
