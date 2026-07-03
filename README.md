@@ -56,10 +56,10 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 
 - `SKILL.md` — self-contained coding-agent guide with classification workflow, implementation cheat sheets, debugging playbook, and quick guidance.
 - `skills.sh.json` — Vercel Skills CLI metadata/grouping for this repository.
-- `references/client-docs-overview.md` — organized Feishu/Lark Developer Guides + Client API crawl overview and source anchors.
-- `references/client-docs-source-catalog.md` — generated full source locator for the official client documentation tree, with local mirror paths.
-- `references/client-docs-mirror-index.json` — machine-readable source URL to local mirrored markdown lookup.
-- `references/client-docs-mirror/` — mirrored official markdown page content for local search and offline access.
+- `references/open-platform-docs-overview.md` — organized Feishu/Lark Open Platform full-documentation mirror overview and source anchors.
+- `references/open-platform-docs-source-catalog.md` — generated full source locator for the official Open Platform documentation tree, with local mirror paths.
+- `references/open-platform-docs-mirror-index.json` — machine-readable source URL to local mirrored markdown lookup.
+- `references/open-platform-docs-mirror/` — mirrored official markdown page content for local search and offline access.
 - `references/open-platform-fundamentals.md` — app model, credentials, permissions, tokens, events, and Web App basics.
 - `references/base-bitable-extensions.md` — Base/Bitable table view, record view, automation action, and `opdev` workflows.
 - `references/cloud-docs-and-apis.md` — Docx, Sheets, Drive, Wiki, Bitable REST, import/export, SDK/CLI/MCP workflows.
@@ -67,7 +67,7 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 - `references/feishu-project-plugins.md` — Feishu Project plugin workflows using `@lark-project/cli` / `lpm`.
 - `references/source-provenance.md` — source inventory and known documentation limits.
 - `references/verification-checklist.md` — review checklist before shipping Feishu/Lark work.
-- `scripts/crawl_client_docs.py` — regenerates the official client-docs source catalog and local markdown mirror.
+- `scripts/crawl_client_docs.py` — regenerates the official Open Platform documentation source catalog and local markdown mirror.
 
 ## Supported source formats
 
@@ -86,12 +86,12 @@ npx skills add . --skill feishu-plugin-development
 
 ## Local documentation search
 
-The official Feishu/Lark pages are mirrored under `references/client-docs-mirror/` for agents that cannot reliably open external documentation links. Search the mirror instead of loading it wholesale:
+The official Feishu/Lark pages are mirrored under `references/open-platform-docs-mirror/` for agents that cannot reliably open external documentation links. Search the mirror instead of loading it wholesale:
 
 ```bash
-rg -ni "base extension|bitable|opdev|automation action" references/client-docs-mirror references/client-docs-source-catalog.md
-rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/client-docs-mirror
-rg -ni "docs add-on|document widget|workplace block|block runtime" references/client-docs-mirror references/client-docs-source-catalog.md
+rg -ni "base extension|bitable|opdev|automation action" references/open-platform-docs-mirror references/open-platform-docs-source-catalog.md
+rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/open-platform-docs-mirror
+rg -ni "docs add-on|document widget|workplace block|block runtime" references/open-platform-docs-mirror references/open-platform-docs-source-catalog.md
 python scripts/crawl_client_docs.py --validate
 ```
 

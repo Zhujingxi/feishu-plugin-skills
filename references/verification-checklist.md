@@ -75,7 +75,7 @@ Use this file when reviewing an implementation based on the `feishu-plugin-devel
 ## 6. Skill repository maintenance
 
 - [ ] Main `SKILL.md` remains a self-contained operating guide; exhaustive official pages stay in `references/` rather than the main skill body.
-- [ ] Authored skill files remain English-only. Generated upstream documentation mirrors may preserve official source-language content under `references/client-docs-mirror/`.
+- [ ] Authored skill files remain English-only. Generated upstream documentation mirrors may preserve official source-language content under `references/open-platform-docs-mirror/`.
 - [ ] Local mirror integrity passes: `python scripts/crawl_client_docs.py --validate`.
 - [ ] Generic skill packaging passes: `npx --yes skills add . --list` and `npx --yes skills use . --skill feishu-plugin-development --full-depth`.
 - [ ] Whitespace hygiene passes with `git diff --check`; if a future upstream mirror intentionally preserves raw whitespace, document that exception next to the generated-file policy.

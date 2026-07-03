@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Refresh or validate the Feishu/Lark client documentation mirror.
+"""Refresh or validate the Feishu/Lark Open Platform documentation mirror.
 
 The Feishu/Lark documentation site can be hard for coding agents to browse
 reliably during implementation. This script crawls the official Open Platform
-documentation directory endpoint, indexes the Developer Guides and Client API
-roots, and mirrors the official markdown page content under
-``references/client-docs-mirror/`` so OpenCode, Codex, and other generic agents
-can query the documentation from the installed skill files.
+documentation directory endpoint, indexes every top-level documentation root,
+and mirrors the official markdown page content under
+``references/open-platform-docs-mirror/`` so OpenCode, Codex, and other generic
+agents can query the documentation from the installed skill files.
 """
 
 from __future__ import annotations
@@ -27,9 +27,16 @@ from pathlib import Path
 
 DOC_DIRECTORY_API = "https://open.feishu.cn/api/tools/docment/directory_list"
 DOC_BASE = "https://open.feishu.cn/document"
-ROOT_NAMES = {"\u5f00\u53d1\u6307\u5357": "Developer Guides", "\u5ba2\u6237\u7aef API": "Client API"}
+ROOT_NAMES = {
+    "\u6587\u6863\u9996\u9875": "Documentation Home",
+    "\u5f00\u53d1\u6307\u5357": "Developer Guides",
+    "\u5f00\u53d1\u6559\u7a0b": "Development Tutorials",
+    "\u670d\u52a1\u7aef API": "Server API",
+    "\u5ba2\u6237\u7aef API": "Client API",
+    "\u98de\u4e66 CLI": "Feishu CLI",
+}
 USER_AGENT = "Hermes Feishu skill documentation crawler"
-MIRROR_DIR_NAME = "client-docs-mirror"
+MIRROR_DIR_NAME = "open-platform-docs-mirror"
 MAX_WORKERS = 8
 FAILURE_RATE_LIMIT = 0.05
 
@@ -79,6 +86,20 @@ def section_key(full_path: str) -> str:
         "native-integration",
         "web-app-open-ability",
         "mcp_open_tools",
+        "auth-v3",
+        "im-v1",
+        "contact-v3",
+        "docx-v1",
+        "sheets-v3",
+        "bitable-v1",
+        "drive-v1",
+        "wiki-v2",
+        "calendar-v4",
+        "approval-v4",
+        "task-v2",
+        "search-v2",
+        "bot-v3",
+        "cli",
     ]
     for key in known:
         if key in parts:
@@ -100,8 +121,29 @@ def mirror_path_for_doc(doc: dict) -> Path:
     return Path(MIRROR_DIR_NAME) / root_slug / section / f"{digest}-{leaf}.md"
 
 
+SECRET_ASSIGNMENT_RE = re.compile(
+    r"(?i)\b((?:APP_|CLIENT_)?SECRET|(?:OPENAI_|API_)?KEY|(?:ACCESS_|REFRESH_|TENANT_ACCESS_|USER_ACCESS_)?TOKEN)"
+    r"(\s*=\s*)"
+    r"([A-Za-z0-9][A-Za-z0-9_+/=-]{12,})"
+)
+
+
+def redact_example_secrets(text: str) -> str:
+    """Redact secret-shaped values from upstream examples before committing mirrors."""
+
+    def replace(match: re.Match[str]) -> str:
+        key, sep, value = match.groups()
+        placeholders = ("your_", "example", "placeholder", "xxxx", "xxx", "test_")
+        if any(marker in value.lower() for marker in placeholders):
+            return match.group(0)
+        return f"{key}{sep}[REDACTED]"
+
+    return SECRET_ASSIGNMENT_RE.sub(replace, text)
+
+
 def normalize_markdown(text: str) -> str:
     """Normalize generated mirror markdown enough for git diff hygiene."""
+    text = redact_example_secrets(text)
     lines = []
     for raw_line in text.replace("\r\n", "\n").replace("\r", "\n").split("\n"):
         line = raw_line.rstrip()
@@ -154,18 +196,18 @@ def walk(node: dict, trail: list[str], docs: list[dict]) -> None:
 
 def build_catalog(docs: list[dict], mirror_results: list[dict], failures: list[str]) -> str:
     lines = [
-        "# Feishu/Lark Client Documentation Source Catalog",
+        "# Feishu/Lark Open Platform Documentation Source Catalog",
         "",
-        "Generated from the official Open Platform directory endpoint and markdown page URLs. This file maps official pages to mirrored markdown files stored inside this skill for coding-agent search and offline access.",
+        "Generated from the official Open Platform directory endpoint and markdown page URLs. This file maps every discovered official documentation page to mirrored markdown files stored inside this skill for coding-agent search and offline access.",
         "",
         f"- Directory source: `{DOC_DIRECTORY_API}`",
-        "- Starting page checked: `https://open.feishu.cn/document/client-docs/intro`",
+        "- Source roots: all top-level roots returned by the directory endpoint",
         f"- Document pages discovered: {len(docs)}",
         f"- Document pages mirrored: {len(mirror_results)}",
         f"- Failed pages: {len(failures)}",
-        "- Roots indexed: Developer Guides and Client API",
-        "- Mirror index: `references/client-docs-mirror-index.json`",
-        "- Mirror root: `references/client-docs-mirror/`",
+        f"- Roots indexed: {', '.join(ROOT_NAMES.values())}",
+        "- Mirror index: `references/open-platform-docs-mirror-index.json`",
+        "- Mirror root: `references/open-platform-docs-mirror/`",
         "",
     ]
 
@@ -192,8 +234,8 @@ def build_catalog(docs: list[dict], mirror_results: list[dict], failures: list[s
 def validate_mirror(references: Path) -> list[str]:
     errors: list[str] = []
     mirror_root = references / MIRROR_DIR_NAME
-    index_path = references / "client-docs-mirror-index.json"
-    catalog_path = references / "client-docs-source-catalog.md"
+    index_path = references / "open-platform-docs-mirror-index.json"
+    catalog_path = references / "open-platform-docs-source-catalog.md"
 
     if not mirror_root.is_dir():
         return [f"missing mirror root: {mirror_root}"]
@@ -268,7 +310,7 @@ def normalize_existing_mirror(references: Path) -> None:
         if normalized != original:
             path.write_text(normalized, encoding="utf-8")
 
-    index_path = references / "client-docs-mirror-index.json"
+    index_path = references / "open-platform-docs-mirror-index.json"
     if index_path.is_file():
         index = json.loads(index_path.read_text(encoding="utf-8"))
         for item in index.get("pages") or []:
@@ -286,8 +328,7 @@ def refresh_mirror(skill_root: Path, allow_failures: bool) -> int:
     payload = fetch_json(DOC_DIRECTORY_API)
     docs: list[dict] = []
     for item in payload.get("data", {}).get("items", []):
-        if item.get("name") in ROOT_NAMES:
-            walk(item, [], docs)
+        walk(item, [], docs)
 
     mirror_root = references / MIRROR_DIR_NAME
     staging_root = references / f".{MIRROR_DIR_NAME}.tmp"
@@ -319,7 +360,7 @@ def refresh_mirror(skill_root: Path, allow_failures: bool) -> int:
             shutil.rmtree(mirror_root)
         staging_root.rename(mirror_root)
 
-        mirror_index = references / "client-docs-mirror-index.json"
+        mirror_index = references / "open-platform-docs-mirror-index.json"
         mirror_index.write_text(
             json.dumps(
                 {
@@ -330,6 +371,12 @@ def refresh_mirror(skill_root: Path, allow_failures: bool) -> int:
                     "discovered_pages": len(docs),
                     "mirrored_pages": len(mirror_results),
                     "failed_pages": failures,
+                    "root_counts": {
+                        ROOT_NAMES.get(item.get("name", ""), safe_slug(item.get("name", ""), "root")): sum(
+                            1 for doc in docs if doc.get("trail") and doc["trail"][0] == item.get("name")
+                        )
+                        for item in payload.get("data", {}).get("items", [])
+                    },
                     "pages": sorted(mirror_results, key=lambda item: item["source"]),
                 },
                 ensure_ascii=False,
@@ -339,7 +386,7 @@ def refresh_mirror(skill_root: Path, allow_failures: bool) -> int:
             encoding="utf-8",
         )
 
-        catalog = references / "client-docs-source-catalog.md"
+        catalog = references / "open-platform-docs-source-catalog.md"
         catalog.write_text(build_catalog(docs, mirror_results, failures), encoding="utf-8")
 
         validation_errors = validate_mirror(references)
@@ -383,7 +430,11 @@ def main(argv: list[str] | None = None) -> int:
             for error in errors:
                 print(f"validation error: {error}", file=sys.stderr)
             return 2
-        print("client docs mirror validation passed")
+        print("open platform docs mirror validation passed")
+        return 0
+
+    if args.normalize:
+        print("open platform docs mirror normalized")
         return 0
 
     return refresh_mirror(skill_root, allow_failures=args.allow_failures)

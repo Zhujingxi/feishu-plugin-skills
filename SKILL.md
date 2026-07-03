@@ -24,7 +24,7 @@ How agents should use this skill:
 
 1. Start with the classification checklist and surface decision tree before editing code.
 2. Use the module index below to load only the relevant detailed reference for the selected Feishu/Lark surface.
-3. Use `references/client-docs-overview.md` when a task touches Feishu/Lark client-side surfaces or when the user asks for official client documentation coverage.
+3. Use `references/open-platform-docs-overview.md` when a task touches Feishu/Lark client-side surfaces or when the user asks for official Open Platform documentation coverage.
 4. Use `references/source-provenance.md` to map important claims to source URLs and known extraction limits.
 5. Use `references/verification-checklist.md` before handing off a Feishu/Lark implementation or skill update.
 
@@ -79,7 +79,7 @@ Use this section as the routing table for coding agents. Keep `SKILL.md` as the 
 
 | Module | Use when the task is about | General principle | Detailed reference |
 |---|---|---|---|
-| Client Documentation Overview | Official client-docs crawl map, Developer Guides and Client API coverage, source anchors | Start here when the task asks for Feishu/Lark client docs completeness or when choosing between H5, Docs add-on, Base, Workplace, cards, and link preview. | `references/client-docs-overview.md`, `references/client-docs-source-catalog.md` |
+| Open Platform Documentation Mirror | Official Open Platform documentation crawl map, Developer Guides and full official directory coverage, source anchors | Start here when the task asks for Feishu/Lark Open Platform docs completeness or when choosing between H5, Docs add-on, Base, Workplace, cards, and link preview. | `references/open-platform-docs-overview.md`, `references/open-platform-docs-source-catalog.md` |
 | Open Platform Fundamentals | App model, self-built vs store apps, credentials, token identity, permissions, events, Web App/H5 basics | An Open Platform app is the capability and permission container; choose distribution, identity, scopes, resource grants, and event transport before coding. | `references/open-platform-fundamentals.md` |
 | Base/Bitable Extensions | Table view, record view, automation action, Base UI extensions, `opdev` upload/debug | If the user needs UI or workflow logic inside Base, use a Base extension; if they only need data CRUD, use server APIs instead. | `references/base-bitable-extensions.md` |
 | Cloud Docs and Server APIs | Docx, Sheets, Drive, Wiki, Bitable REST, import/export, backend automation, SDK/CLI/MCP operations | Server APIs manipulate resources without creating an embedded Feishu/Lark UI; select token identity and resource grants first. | `references/cloud-docs-and-apis.md` |
@@ -282,13 +282,13 @@ The mirrored official docs are stored locally so coding agents do not need to re
 Recommended searches from the skill root:
 
 ```bash
-rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/client-docs-mirror
-rg -ni "base extension|bitable|table view|record view|automation action|opdev" references/client-docs-mirror references/client-docs-source-catalog.md
-rg -ni "docs add-on|document widget|selection|viewport|bridge" references/client-docs-mirror references/client-docs-source-catalog.md
-rg -ni "workplace block|block runtime|open capability|storage|navigation" references/client-docs-mirror references/client-docs-source-catalog.md
+rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/open-platform-docs-mirror
+rg -ni "base extension|bitable|table view|record view|automation action|opdev" references/open-platform-docs-mirror references/open-platform-docs-source-catalog.md
+rg -ni "docs add-on|document widget|selection|viewport|bridge" references/open-platform-docs-mirror references/open-platform-docs-source-catalog.md
+rg -ni "workplace block|block runtime|open capability|storage|navigation" references/open-platform-docs-mirror references/open-platform-docs-source-catalog.md
 ```
 
-Use `references/client-docs-mirror-index.json` when you need source URL to local-file lookup. Use `references/client-docs-overview.md` for search aliases and the surface map.
+Use `references/open-platform-docs-mirror-index.json` when you need source URL to local-file lookup. Use `references/open-platform-docs-overview.md` for search aliases and the surface map.
 
 ## Debugging Playbook
 
@@ -308,7 +308,7 @@ A Feishu/Lark implementation or skill update is not ready until the relevant che
 - Confirm Feishu China vs Lark international environment and domains.
 - Confirm frontmatter stays valid and support files remain under allowed directories such as `references/`, `templates/`, `scripts/`, or `assets/`.
 - Confirm no secrets, tokens, private keys, tenant/user identifiers, or raw PII were added to persisted skill artifacts.
-- Confirm authored skill/repo guidance remains English-only; generated upstream documentation mirrors may preserve the source language and must stay under `references/client-docs-mirror/`.
+- Confirm authored skill/repo guidance remains English-only; generated upstream documentation mirrors may preserve the source language and must stay under `references/open-platform-docs-mirror/`.
 - Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs, mirrored upstream docs, and long source inventories in `references/`.
 - For generic open-agent distribution, verify from the repo root:
 
@@ -344,13 +344,13 @@ Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the packag
 ## Source Provenance Quick Links
 
 - Use `references/source-provenance.md` for the detailed source inventory and known extraction limitations.
-- Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
-- Use `references/client-docs-source-catalog.md` to map official pages to mirrored local markdown files.
-- Use `references/client-docs-mirror-index.json` for machine-readable source URL -> local file lookup.
-- Use `references/client-docs-mirror/` for mirrored official markdown page content when live documentation access is unreliable. Search it narrowly with `rg` first, then read only the matching files needed for the task.
+- Use `references/open-platform-docs-overview.md` for the latest organized crawl of official all official directory roots.
+- Use `references/open-platform-docs-source-catalog.md` to map official pages to mirrored local markdown files.
+- Use `references/open-platform-docs-mirror-index.json` for machine-readable source URL -> local file lookup.
+- Use `references/open-platform-docs-mirror/` for mirrored official markdown page content when live documentation access is unreliable. Search it narrowly with `rg` first, then read only the matching files needed for the task.
 - To refresh the generated catalog and mirror, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
 - The mirror stores official page content for local search/access. Still re-check live docs before production release when exact current API parameters, CLI templates, or console labels are high-risk.
-- Authored skill artifacts must remain English-only. Generated upstream documentation mirrors may preserve source-language content under `references/client-docs-mirror/`; generated catalogs and scripts should keep ASCII-safe paths and English headings.
-- When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Verify syntax, generated output invariants, determinism when applicable, English-only persisted output, and `git diff --check`; remove the verifier after the run and report it as ad-hoc verification.
+- Authored skill artifacts must remain English-only. Generated upstream documentation mirrors may preserve source-language content under `references/open-platform-docs-mirror/`; generated catalogs and scripts should keep ASCII-safe paths and English headings.
+- When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Run it against the changed behavior, not just the happy-path CLI. For `scripts/crawl_client_docs.py`, verify `normalize_markdown()` whitespace behavior, `validate_mirror()` on a minimal fixture, `python -m py_compile scripts/crawl_client_docs.py`, `python scripts/crawl_client_docs.py --validate`, and `git diff --check`. Remove the verifier after the run and report it explicitly as ad-hoc verification, not suite green.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
 - `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.

@@ -30,10 +30,10 @@ A refreshed crawl started from `https://open.feishu.cn/document/client-docs/intr
 
 Generated skill references:
 
-- `references/client-docs-overview.md` — organized English overview of the Feishu/Lark Developer Guides and Client API roots, including official source anchors and routing guidance.
-- `references/client-docs-source-catalog.md` — generated full locator for the official client documentation tree. It indexes 1,805 discovered document pages under Developer Guides and Client API roots and maps them to local mirror files.
-- `references/client-docs-mirror-index.json` — generated machine-readable index mapping official source URLs and markdown source URLs to local mirror paths.
-- `references/client-docs-mirror/` — generated mirror of official markdown page content. The latest run mirrored 1,793 pages; 12 directory entries returned markdown 404 responses.
+- `references/open-platform-docs-overview.md` — organized English overview of the Feishu/Lark Developer Guides and Client API roots, including official source anchors and routing guidance.
+- `references/client-docs-source-catalog.md` — generated full locator for the official Open Platform documentation tree. It indexes 1,805 discovered document pages under Developer Guides and Client API roots and maps them to local mirror files.
+- `references/open-platform-docs-mirror-index.json` — generated machine-readable index mapping official source URLs and markdown source URLs to local mirror paths.
+- `references/open-platform-docs-mirror/` — generated mirror of official markdown page content. The latest run mirrored 1,793 pages; 12 directory entries returned markdown 404 responses.
 
 The crawl showed that client-side/plugin work spans Web App/H5, Docs add-ons, Base/Bitable extensions, Workplace Blocks, link preview, Feishu Cards/CardKit, Client APIs, developer tools, and deprecated Gadget/Mini Program material. Deprecated/historical pages remain in the catalog for discoverability but should not be used for new development unless the user explicitly requests legacy maintenance.
 
