@@ -308,6 +308,8 @@ A Feishu/Lark implementation or skill update is not ready until the relevant che
 - Confirm Feishu China vs Lark international environment and domains.
 - Confirm frontmatter stays valid and support files remain under allowed directories such as `references/`, `templates/`, `scripts/`, or `assets/`.
 - Confirm no secrets, tokens, private keys, tenant/user identifiers, or raw PII were added to persisted skill artifacts.
+- When mirroring upstream official docs, treat sample credentials as publish-blocking even if they came from the vendor docs. Redact secret-shaped assignment values such as `APP_SECRET=<long value>` to `[REDACTED]` before committing, while preserving environment-variable access examples such as `System.getenv("APP_SECRET")`.
+- Run a broad pre-push secret scan over both authored files and generated mirrors; GitHub push protection may reject vendor example secrets, so fix the mirror/crawler and amend the commit rather than bypassing protection.
 - Confirm authored skill/repo guidance remains English-only; generated upstream documentation mirrors may preserve the source language and must stay under `references/open-platform-docs-mirror/`.
 - Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs, mirrored upstream docs, and long source inventories in `references/`.
 - For generic open-agent distribution, verify from the repo root:
