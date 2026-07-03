@@ -40,7 +40,7 @@ id<KAStatisticsProtocol> statistics = api.statistics;
 
 ### **property statistics**
 
-埋点能力接口实例 
+埋点能力接口实例
 ```cpp
 id< KAStatisticsProtocol > _Nullable statistics;
 ```
@@ -49,7 +49,7 @@ id< KAStatisticsProtocol > _Nullable statistics;
 
 ## KAStatisticsProtocol
 
-埋点能力接口协议，用于向埋点平台上报数据 
+埋点能力接口协议，用于向埋点平台上报数据
 `#include <interface_LKStatisticsExternal-Swift.h>`
 
 |        类型     | 定义名称           |
@@ -60,7 +60,7 @@ id< KAStatisticsProtocol > _Nullable statistics;
 
 ### **function initConfigWithAppId:registerHost:appLogHost:commonParams:**
 
-配置，用于初始化统计组件 
+配置，用于初始化统计组件
 ```cpp
 virtual void initConfigWithAppId:registerHost:appLogHost:commonParams:(
     NSString *_Nonnull appId,
@@ -72,7 +72,7 @@ virtual void initConfigWithAppId:registerHost:appLogHost:commonParams:(
 
 ### **function sendEventWithName:**
 
-埋点 
+埋点
 
 ```cpp
 virtual void sendEventWithName:(
@@ -80,13 +80,13 @@ virtual void sendEventWithName:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
-* **name** 事件名称 
+* **name** 事件名称
 
 ### **function sendEventWithName:params:**
 
-埋点 
+埋点
 
 ```cpp
 virtual void sendEventWithName:params:(
@@ -95,9 +95,9 @@ virtual void sendEventWithName:params:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **name** 事件名称
-  * **params** 事件参数 
+  * **params** 事件参数
 
 -------------------------------

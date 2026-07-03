@@ -43,8 +43,8 @@ adapter.onDiscovered(
                 fail(err) {
                     console.log(`Ndef.connect fail: ${JSON.stringify(res)}`)
                 }
-            });   
-        }   
+            });
+        }
     }
 );
 ```

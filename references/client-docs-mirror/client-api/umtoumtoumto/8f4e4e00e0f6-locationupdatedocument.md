@@ -67,7 +67,7 @@ tt.API({
 
 本章节分别介绍在小程序、uni-app 以及网页应用中如何启用新版 API。
 
-#### 小程序 
+#### 小程序
 
 在小程序项目的 app.json 配置文件中，添加以下配置，以启用新版 API。
 
@@ -88,7 +88,7 @@ tt.API({
 	// 如果需要使用 chooseLocation，则进行以下配置，否则不需要配置。
 	"chooseLocation": {
 		"version": 2 // 取值 2 代表启用 chooseLocation 的新版 API。
-	}  
+	}
 }
 ```
 

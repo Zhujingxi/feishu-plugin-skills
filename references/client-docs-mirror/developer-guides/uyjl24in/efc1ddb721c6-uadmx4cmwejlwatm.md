@@ -79,7 +79,7 @@ properties: {
   data: {},
 
 // 生命周期函数，可以为函数，或一个在 methods 段中定义的方法名
-   attached: function () { 
+   attached: function () {
     this.selectComponent('.class-name', function(res) {
       console.log(res)
     })
@@ -115,7 +115,7 @@ _propertyChange: function(newVal, oldVal) {
 ```js
 {
   "usingComponents": {
-  	"my-component" : "/pages/index/index?paramA=123&paramB=xyz"
+	"my-component" : "/pages/index/index?paramA=123&paramB=xyz"
   }
 }
 ```

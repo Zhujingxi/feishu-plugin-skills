@@ -22,7 +22,7 @@ myComponent.invoke('GET_SUITE_TITLE').then(function(response) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |
 |data|String|标题||

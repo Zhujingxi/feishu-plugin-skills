@@ -33,11 +33,11 @@ success 函数返回对象参数扩展属性：
           "tab": "api",
           "item": "getStorage"
   },
-    "openDetail": 1, 
-    "title": "getStorage", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D", 
+    "openDetail": 1,
+    "title": "getStorage",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {

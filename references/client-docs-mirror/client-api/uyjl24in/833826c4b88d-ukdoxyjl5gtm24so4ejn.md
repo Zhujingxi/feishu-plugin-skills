@@ -78,7 +78,7 @@ tt.getBLEDeviceCharacteristics({
   },
   "errMsg": "getBLEDeviceCharacteristics:ok",
 }
-``` 
+```
 `fail`返回对象示例：
 ```json
 {

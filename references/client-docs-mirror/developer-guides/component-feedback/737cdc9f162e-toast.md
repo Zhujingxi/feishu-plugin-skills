@@ -130,7 +130,7 @@ web： 距离顶部间距推荐32px | PC：距离顶部间距推荐72px
 
 Toast 的层级高度受触发的框架影响，不同框架弹出的 Toast 高度不同，框架之间为嵌套关系，父级高于子级
 
-![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/bdeb5e1ce043acf2c013a27e8aaaa3c1_DFYLkdQ0zr.png?height=736&lazyload=true&maxWidth=600&width=1280)  
+![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/bdeb5e1ce043acf2c013a27e8aaaa3c1_DFYLkdQ0zr.png?height=736&lazyload=true&maxWidth=600&width=1280)
 
 ### 展示说明
 

@@ -145,7 +145,7 @@ class FileMessageBody : MessageBody
 
 #### Constructors
 
-- 
+-
    constructor()
 
 #### Properties
@@ -176,7 +176,7 @@ open class Message
 
 #### Constructors
 
-- 
+-
    constructor(**@** **NonNull** messageType: MessageType, **@** **NonNull** messageBody: IMessageBody)
 
 #### Properties
@@ -238,7 +238,7 @@ class Builder
 
 #### Constructors
 
-- 
+-
    constructor()
 
 #### Functions

@@ -77,7 +77,7 @@ try {
   "theme": "light",
   "deviceType": "phone"
 }
-``` 
+```
 
 ## 错误码
 

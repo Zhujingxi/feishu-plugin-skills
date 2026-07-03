@@ -19,5 +19,5 @@ myComponent.register('DOC_EDITOR_SCROLL', function(scrollTop) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |scrollTop|	Number |滚动距离|

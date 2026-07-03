@@ -10,9 +10,9 @@ MessageManager.transferMessage(Object object) 用于小程序向 web-view 发送
 - PC 端需要 web-view 内的网页先给小程序发一次信息，然后才可以调用该接口实现小程序向 web-view 发送消息。
 - [web-view](https://open.feishu.cn/document/uYjL24iN/ukzNukzNukzN) 组件中的网页需要引入 JSSDK 才能使用该 API。引入方法如下。
 
-```javascript 
+```javascript
 <script type="text/javascript" src="https://lf1-cdn-tos.bytegoofy.com/goofy/ee/spm/lark/jssdk/webview/jssdk-1.0.4.js"></script>
-``` 
+```
 
 ## 支持说明
 
@@ -78,7 +78,7 @@ h5Manager.onTransferMessage(function (res) {
 ```json
 // sample1 result: gadget get message from web-view
 {
-    "channel": "MESSAGE_CHANNEL_WEBVIEW_cZ1NK3brvp_0", 
+    "channel": "MESSAGE_CHANNEL_WEBVIEW_cZ1NK3brvp_0",
     "data": {
         "test": "b"
     }
@@ -91,7 +91,7 @@ h5Manager.onTransferMessage(function (res) {
         "test": "text"
     }
 }
-``` 
+```
 
 ## 错误码
 

@@ -30,7 +30,7 @@ startPasswordVerify(Object object) 用于调起二次验证飞书安全密码的
 调用示例：
 
 ```js
-tt.startPasswordVerify({ 
+tt.startPasswordVerify({
     success(res) {
       console.log(JSON.stringify(res));
     },

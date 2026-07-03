@@ -57,7 +57,7 @@ tt.notifyBLECharacteristicValueChange({
 {
 	"errMsg": "notifyBLECharacteristicValueChange:ok"
 }
-``` 
+```
 `fail`返回对象示例：
 ```json
 {

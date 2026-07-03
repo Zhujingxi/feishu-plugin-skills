@@ -110,7 +110,7 @@ Js 发送的事件
 ```
 
 #### 属性列表
-| 属性名 | 类型 | 描述 | 
+| 属性名 | 类型 | 描述 |
 | --- | --- | --- |
 | params | NSDictionary<NSString *, id> * _Nullable | 事件参数 |
 | name | NSString * _Nonnull | 事件名 |

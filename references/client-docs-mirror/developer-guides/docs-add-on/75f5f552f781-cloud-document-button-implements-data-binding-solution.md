@@ -98,7 +98,7 @@ const data = await docMiniApp.Block.appendBlock(rootBlock.ref, {
 示例中 /api/datasource 接口返回的数据如下：
 
 ```js
-// GET: https://bytedance.larkoffice.com/api/datasource 
+// GET: https://bytedance.larkoffice.com/api/datasource
 // Response:
 {
     code: 0//状态码 0=请求成功
@@ -147,14 +147,14 @@ const data = await docMiniApp.Block.appendBlock(rootBlock.ref, {
                       extra: ''
                   },
                   // 新增以下代码
- actions : [{ 
+ actions : [{
   // 打开文档小组件
- type : ButtonActionType . OpenDocVerse , 
- value : JSON . stringify ({ 
+ type : ButtonActionType . OpenDocVerse ,
+ value : JSON . stringify ({
   // 绑定对应的小组件
- blockTypeID :  'blk_xasdf'  , 
- }), 
- }] 
+ blockTypeID :  'blk_xasdf'  ,
+ }),
+ }]
               },
               style: {}
           }]
@@ -286,7 +286,7 @@ async function addButton() {
           }
         });
         // 插入按钮
-        newElements.push(button); 
+        newElements.push(button);
         newElements.push({
           text_run: {
             ...item.text_run,

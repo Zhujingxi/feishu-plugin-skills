@@ -61,7 +61,7 @@ tt.showToast({
 {
   errMsg: "showToast:ok"
 }
-``` 
+```
 
 ## 错误码
 

@@ -37,8 +37,8 @@ menuItem 对象参数说明：
 ### 代码示例
 ```json
 {
-  	"tab": "api",
-  	"item": "updateMenuItem"
+	"tab": "api",
+	"item": "updateMenuItem"
   }
 ```
 
@@ -51,7 +51,7 @@ tt.updateMenuItem({
       zh_cn: '设置'，
       en_us: 'setting',
       ja_jp: 'セットアップ'
-    }      
+    }
   },
   success (res) {
     console.log('updateMenuItem 调用成功', res.errMsg);

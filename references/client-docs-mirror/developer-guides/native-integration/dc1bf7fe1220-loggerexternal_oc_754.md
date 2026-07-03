@@ -99,6 +99,6 @@ Logger 协议，用于打印日志
 ```
 
 #### 属性列表
-| 属性名 | 类型 | 描述 | 
+| 属性名 | 类型 | 描述 |
 | --- | --- | --- |
 | logger | id <KALoggerProtocol> _Nullable | Logger 能力接口实例 |

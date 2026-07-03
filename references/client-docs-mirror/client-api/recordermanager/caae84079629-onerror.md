@@ -23,12 +23,12 @@ callback | function | 是 | &nbsp; | 该事件的回调函数
 
 ## 输出
 回调函数返回对象的属性：
-```javascript 
+```javascript
 interface OnErrorDetail {
     errno: number;
     errString: string;
 }
-``` 
+```
 |errno|errString|含义|
 |--|--|------|
 |1305001|Unable to record. A higher priority media event is being processed, ${reason}|开始录制音频抢占播放失败(有优先级更高的业务方在播放)|

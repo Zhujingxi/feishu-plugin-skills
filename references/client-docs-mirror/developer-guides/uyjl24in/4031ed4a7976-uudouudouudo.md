@@ -50,7 +50,7 @@ TTML 提供两种文件引用方式 import 和 include。
 
 ```html
 <import src="b.ttml"/>
-<template is="A"/>  
+<template is="A"/>
 <template is="B"/>
 ```
 

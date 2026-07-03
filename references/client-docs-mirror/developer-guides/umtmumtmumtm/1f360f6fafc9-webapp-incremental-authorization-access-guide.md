@@ -36,7 +36,7 @@ if (window.tt.requestAccess) {
     //需要用户授权的三方应用权限，权限点位需要在步骤一中已申请开通
     scopeList: ["admin:app.admin_id:readonly", "calendar:calendar"],
     // 用来维护请求状态的附加字符串，应用可以根据此字符串来判断上下文关系
-    state: "RANDOMSTATE", 
+    state: "RANDOMSTATE",
     success: (res) => {
       // 用户授权后返回预授权码
       const { code } = res;
@@ -79,8 +79,8 @@ function callRequestAuthCode() {
 ### 第四步：用户同意授权，获取授权码
 用户同意授权后，接口会返回授权码 code
 
-| 名称         | 类型           | 描述       
-| --------- | --------------- | -------  
+| 名称         | 类型           | 描述
+| --------- | --------------- | -------
 |`code` | `string` | 临时登录凭证，有效期 3 分钟，只能使用一次 |
 |`state` | `string` | 用来维护请求状态的附加字符串，应用可以根据此字符串来判断上下文关系 |
 

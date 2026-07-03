@@ -46,7 +46,7 @@ npm install @lark-opdev/cli@latest -g -f
 2. 登录 CLI。
 	- CLI 初次使用需要登录，打开终端，执行下面命令`opdev login`登录CLI。
 
-- 这里开发环境选择 `Feishu`： 
+- 这里开发环境选择 `Feishu`：
 
 ![cli登陆.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/518971a6fc6cbdcef4e3484fc70a06a4_trdNQyjdhf.png?height=264&lazyload=true&width=1680)
 
@@ -83,7 +83,7 @@ npm install @lark-opdev/cli@latest -g -f
 4. 初始化项目。
 使用下面命令安装项目依赖：
 ```
-cd ${app-dir}/${view-dir} 
+cd ${app-dir}/${view-dir}
 npm install
 ```
 
@@ -130,7 +130,7 @@ const tableMetaList = await bitable.base.getTableMetaList();
 
 ![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/45d2e61db36c7c9e745ea5dea40cb133_uKCRt8Cdz0.png?height=1560&lazyload=true&maxWidth=600&width=2884)
 
-2. （可选）发布应用。 
+2. （可选）发布应用。
 
 如果以上申请的权限在当前租户管理员设置的权限等级是免审权限，则可以申请后直接生效。如果以上申请的权限为需要审核权限，则必须发布应用使配置生效。
 

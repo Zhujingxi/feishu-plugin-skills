@@ -126,7 +126,7 @@ interface BindLumaDetectDetail {
 ## 代码示例
 
 TTML文件
-```html 
+```html
 <scroll-view class="page-body">
   <view class="page-body-wrapper">
     <camera
@@ -155,9 +155,9 @@ TTML文件
 
 </view>
 </scroll-view>
-``` 
+```
 JS文件
-```javascript 
+```javascript
 const camera = i18n.cameraComponent
 
 Page({
@@ -248,7 +248,7 @@ previewImage: function () {
 TTSS文件
 ```css
 .preview-tips {
-  margin: 20rpx 0;  
+  margin: 20rpx 0;
 }
 
 .video {
@@ -274,7 +274,7 @@ TTSS文件
   top: 40px;
 }
 .preview-tips {
-  margin: 20rpx 0;  
+  margin: 20rpx 0;
 }
 
 .video {

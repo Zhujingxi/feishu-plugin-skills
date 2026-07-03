@@ -64,7 +64,7 @@ tt.chooseImage({
   "errMsg": "compressImage:ok",
   "tempFilePath": "ttfile://temp/668fbc22-638f-42f3-8e15-cadcbe1bc8d0-e95788e6-2949-4fde-b253-14b6b4c57e15-f9c3d20d141d0e6f32eea6c240b59544.png"
 }
-``` 
+```
 
 ## 错误码
 

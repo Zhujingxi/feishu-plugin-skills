@@ -36,7 +36,7 @@ value | number | 屏幕亮度值。取值范围：0 ~ 1，其中，`0` 最暗、
 调用示例：
 
 ```js
-tt.getScreenBrightness({ 
+tt.getScreenBrightness({
     success(res) {
       console.log(JSON.stringify(res));
     },

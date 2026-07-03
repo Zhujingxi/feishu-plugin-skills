@@ -64,7 +64,7 @@ tt.getHostLaunchQuery({
                         console.log(`getBlockActionSourceDetail fail:${JSON.stringify(res)}`);
                     }
                 })
-            } 
+            }
         } else {
             console.log(`getHostLaunchQuery fail:${JSON.stringify(res)}`);
         }
@@ -89,8 +89,8 @@ tt.getHostLaunchQuery({
     "openMessageId": "om_xxxx",
     "content":"{\"text\":\"123\"}",
     "status":true
-} 
-``` 
+}
+```
 #### post 富文本消息
 ```json
 {
@@ -106,7 +106,7 @@ tt.getHostLaunchQuery({
     "content":"{\"title\":\"来来来\",\"content\":[{\"attrs\":[{\"tag\":\"at\",\"open_id\":\"ou_bbb89d41d088803ef89f1a798121ac39\",\"text\":\"@剑豪\"},{\"tag\":\"text\",\"text\":\" \"}]},{\"attrs\":[{\"tag\":\"img\",\"url\":\"xxximageUrl\"}]},{\"attrs\":[{\"tag\":\"text\",\"text\":\"光谷六路十五号\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"text\",\"text\":\"啦啦啦啦\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"},{\"tag\":\"unknown\",\"text\":\"\"}]}]}",
     "status":true
 }
-``` 
+```
 
 #### image 图片消息
 ```json
@@ -123,7 +123,7 @@ tt.getHostLaunchQuery({
     "content":"{\"url\":\"https://s3-imfile.feishucdn.com/static-resource/v1/f8836d60-07cb-4fd4-92ce-01e54952f79g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp\"}",
     "status":true
 }
-``` 
+```
 其中，url 为图片的下载链接，关于**如何通过URL获取图片详情**，参见文末"[其他说明](https://open.feishu.cn/document/getBlockActionSourceDetail#26591811)"
 
 #### media 视频消息
@@ -141,7 +141,7 @@ tt.getHostLaunchQuery({
     "content":"{\"file_url\":\"xxx\",\"image_url\":\"​xxx\",\"duration\":\"xxx\"}",
     "status":true
 }
-``` 
+```
 file_url 为视频消息中视频文件的下载链接，image_url 为视频预览封面的下载链接，duration 为视频的时长，单位为 ms；下载方式可详见文末[其他说明](https://open.feishu.cn/document/getBlockActionSourceDetail#26591811)。
 
 #### file 文件消息
@@ -159,7 +159,7 @@ file_url 为视频消息中视频文件的下载链接，image_url 为视频预�
     "content":"{\"file_url\":\"xxx\"}",
     "status":true
 }
-``` 
+```
 file_url 为文件消息中对应文件的下载链接，下载方式可详见文末[其他说明](https://open.feishu.cn/document/getBlockActionSourceDetail#26591811)。
 
 #### interactive [消息卡片](https://open.feishu.cn/document/ukTMukTMukTM/uczM3QjL3MzN04yNzcDN)消息
@@ -177,7 +177,7 @@ file_url 为文件消息中对应文件的下载链接，下载方式可详见�
     "content":"{\"title\":\"xxx\",\"elements\":[[{\"tag\":\"at\",\"user_id\":\"xxx\",\"user_name\":\"xxx\"},{\"tag\":\"text\",\"text\":\"xxx\"}],[{\"tag\":\"img\",\"image_key\":\"xxx\"},{\"tag\":\"a\",\"href\":\"xxx\",\"text\":\"xxx\"}],...]}",
     "status":true
 }
-``` 
+```
 
 #### unsupport 暂不支持的消息类型
 
@@ -196,7 +196,7 @@ file_url 为文件消息中对应文件的下载链接，下载方式可详见�
     "status":true
 }
 
-``` 
+```
 
 ## 错误码
 
@@ -220,11 +220,11 @@ file_url 为文件消息中对应文件的下载链接，下载方式可详见�
 **1. 通过接口获取URL**
 以图片为例，json结构如下：
 
-```json 
+```json
 {
     "url":"https://open.feishu.cn/open-apis/im/v1/images/:image_key"
 }
-``` 
+```
 
 **2. 根据获取到的URL下载资源**
 - 请求

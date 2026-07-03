@@ -32,7 +32,7 @@ messages | object[] | 读取到的NdefRecord数组
 &emsp;<br>∟<br>&nbsp;<br>payload | arraybuffer | NdefRecord的payload值
 
 **注意事项**：**注意**
-- Harmony端：当读取的NdefRecord中type字段为空时，鸿蒙系统会返回空的NdefRecord对象，此问题待鸿蒙系统修复 
+- Harmony端：当读取的NdefRecord中type字段为空时，鸿蒙系统会返回空的NdefRecord对象，此问题待鸿蒙系统修复
 
 ## 示例代码
 **注意事项**：这里仅示例当前 API 使用，实际流程请参考：[接入 NFC](https://open.feishu.cn/document/uYjL24iN/ugTN4YjL4UDO24CO1gjN)

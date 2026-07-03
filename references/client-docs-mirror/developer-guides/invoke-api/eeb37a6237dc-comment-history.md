@@ -23,11 +23,11 @@ myComponent.invoke('TOGGLE_COMMENT_HISTORY', true).then(function(response) {
 
 ## 参数
 |属性|	类型|	是否必须	|说明|
-| ---|----- | -------|------ | 
+| ---|----- | -------|------ |
 |visible|	Boolean	|否|	是否显示
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |

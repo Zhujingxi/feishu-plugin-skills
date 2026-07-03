@@ -26,7 +26,7 @@ PC 端消息卡片为可自适应窗口宽度的**宽版**样式。
 ![宽版卡片.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/c3bc6327836a09834e35869b5420d0d5_ktbn2ryzqA.png?lazyload=true&width=1998&height=1548)
 
 - 规则：卡片宽度跟随窗口自适应，最宽 605px，最窄 302px。
-- 
+-
 ![宽版适配规则.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/88483813a1eaf1d0f569d44c57342dd5_zCUhXWP1N2.png?lazyload=true&width=3134&height=1854)
 
 适配示意：
@@ -55,7 +55,7 @@ Mobile 端消息卡片为**窄版**样式，尺寸固定为 302px。
 
 ###   3.3.1 标题
 - 标题包含两种样式：**常规标题**与**彩色标题**，标题文本为 16px Medium，标题为非必选组件。
-- 
+-
 **常规标题**
 - 适用于常规场景，无需重点强调指引的消息卡片。
 
@@ -91,7 +91,7 @@ Mobile 端消息卡片为**窄版**样式，尺寸固定为 302px。
   - 超链接：可进行点击操作文本，通过点击可跳转至另一个目标；
   - @用户：当需要定位或提及某用户时使用，可以 @他人或 @所有人；
   - Emoji：表情符号。
-  - 
+  -
 **普通文本**
 
 普通文本样式可采用如下样式：常规、加粗、删除线、Emoji、超链接、@用户
@@ -257,20 +257,20 @@ Mobile 端消息卡片为**窄版**样式，尺寸固定为 302px。
 
 ###   3.3.9 日期时间选择器
 
-####  PC 端 
+####  PC 端
 
 ![日期时间选择器 PC.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/3dc72df449a33caf19f2be30d3f7a955_SSRf5rTyTU.png?lazyload=true&width=2000&height=472)
 状态列举：
 
 ![日期时间选择器 PC 状态枚举.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/ae1c192fcac5c1015105ca91c2e64445_Asp2QWJWBd.png?lazyload=true&width=2000&height=1568)
 
-####  Mobile 端 
+####  Mobile 端
 
 ![日期时间选择 M.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/fd844fd44d4956eb293b4549609ac809_0tc7SstuBn.png?lazyload=true&width=1820&height=1564)
 
 ###  3.3.10 下拉按钮
 
-####   PC 端 
+####   PC 端
 
 ![下拉按钮 PC.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/d625985be7c3987ea2acc5820ee84269_7omggBE5HT.png?lazyload=true&width=2000&height=432)
 状态列举：
@@ -280,7 +280,7 @@ Mobile 端消息卡片为**窄版**样式，尺寸固定为 302px。
 
 ![下拉按钮 M.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/061c8de23cb857cf98f084257a79fa23_w6wbncDkEp.png?lazyload=true&width=2000&height=1576)
 
-###  3.3.11 组合式组件 
+###  3.3.11 组合式组件
 **普通文本 + 图片**
 - 文字左对齐，图片右对齐，文本与图片之间固定间距 16px；
 - 图片尺寸为 64\*64px，可点击查看大图。
@@ -339,15 +339,15 @@ PC 端包含以下 5 种组合组件：
 ![备注 案例.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/4614948b8f007b300c7228df55f2dce3_pCstleAtfx.png?lazyload=true&width=2000&height=916)
 #  四、最佳实践与设计建议
 
-##  4.1 最佳实践 
+##  4.1 最佳实践
 
-###  4.1.1 案例1：新手卡片 
+###  4.1.1 案例1：新手卡片
 
 一个完整的新手卡片可由以下五个部分组成：欢迎语+应用介绍+帮助文档+移动/PC端可使用提醒以及引导按钮组合组成。
 
 ![案例一：新手卡片.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/9cf5979ba957650af893a0e1aa0dc007_Y9VQmsCdWL.png?lazyload=true&width=2000&height=722)
 
-###  4.1.2 案例2: 审批请求类卡片 
+###  4.1.2 案例2: 审批请求类卡片
 用于接受和响应请求的示例。标题处可明确卡片主题内容，以文字列表组件展示核心内容，并将操作入口外露，尽量在卡片内完成以减少跳转。
 
 ![案例二：申请审批类.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/f6800ac75b6b835554dc5eda9cbbedb9_WnyiskjUjG.png?lazyload=true&width=2000&height=696)
@@ -360,7 +360,7 @@ PC 端包含以下 5 种组合组件：
 ![案例三：图文信息组合浏览.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b9741c66be706bc3d213e71778d5c1e2_2xT9I4NBnh.png?lazyload=true&width=2000&height=868)
 📝 [文章列表卡片示例代码](https://open.feishu.cn/document/ukTMukTMukTM/uYzM3QjL2MzN04iNzcDN/sample-code/article-list)
 
-###  4.1.4 案例4：内容较复杂的图文信息浏览 
+###  4.1.4 案例4：内容较复杂的图文信息浏览
 
 消息卡片可以完整的展示一个内容类型，并可利用各组件进行结构化、多维度的排版。
 
@@ -373,7 +373,7 @@ PC 端包含以下 5 种组合组件：
 
 ![案例五：彩色标题的运用（仅内部可用彩色标题）.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/aa964231bf1e92bb876c7223a0070b6f_HhBiUxsJiY.png?lazyload=true&width=2000&height=2374)
 
-###  4.1.6 案例6：复杂多次的交互 
+###  4.1.6 案例6：复杂多次的交互
 当交互完成后，如果不希望用户进行重复操作，可实时更新当前卡片展示操作结果。
 
 以订餐为例：
@@ -382,7 +382,7 @@ PC 端包含以下 5 种组合组件：
 
 ##  4.2 设计建议
 
-### 4.2.1 有重点的排版 
+### 4.2.1 有重点的排版
 
 我们推荐采用从上到下由主到次的内容排列顺序，避免卡片中主次穿插为用户带来阅读障碍。
 

@@ -54,7 +54,7 @@ originData = {
     data: { // 这是三方数据
         config: { color: 'red', time: '2023-1-18' }
     }
-} 
+}
 ```
 我们将原数据复制粘贴后，会变成下面这样
 ```js
@@ -64,7 +64,7 @@ cloneData = {
     data: { // 这是三方数据
         config: { color: 'red', time: '2023-1-18' }
     }
-} 
+}
 ```
 
 ### 如何使用协同能力

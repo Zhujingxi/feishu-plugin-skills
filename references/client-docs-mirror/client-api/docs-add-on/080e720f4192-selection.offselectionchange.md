@@ -48,7 +48,7 @@ const selectionChangeCb = (selectedBlocks: BlockSnapshot[]) => {
 useEffect(() => {
     DocMiniApp.Selection.onSelectionChange(docRef, selectionChangeCb);
     return () => {
-        DocMiniApp.Selection.offSelectionChange(docRef, selectionChangeCb);    
+        DocMiniApp.Selection.offSelectionChange(docRef, selectionChangeCb);
     };
 });
 ```

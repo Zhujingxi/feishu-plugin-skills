@@ -30,7 +30,7 @@ exports.goodbye = goodbye;
 - 如果该文件是自己本地项目下的模块，则 path 需要为相对路径。
 
 ```js
-    // index.js 
+    // index.js
     const common = require('./common.js') // common.js 在与 index.js 同级 的目录下
     Page({
       helloWorld: function() {
@@ -84,7 +84,7 @@ exports.goodbye = goodbye;
 3. 在 b.js 中的获取信息。
 
 ```javascript
-    // b.js 
+    // b.js
     // 如果 a.js 已经在 b.js 前加载过，那么此时 globalData 应该为 2
     console.log(getApp().globalData);
     ```

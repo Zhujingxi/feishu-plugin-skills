@@ -40,8 +40,8 @@ adapter.onDiscovered(
                 fail(err) {
                     console.log(`NfcV.connect fail: ${JSON.stringify(res)}`)
                 }
-            });   
-        }   
+            });
+        }
     }
 );
 ```

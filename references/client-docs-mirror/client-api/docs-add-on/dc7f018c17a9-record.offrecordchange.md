@@ -48,7 +48,7 @@ const recordChangehandler = (recordData: any) => {
 useEffect(() => {
     DocMiniApp.Record.onRecordChange(recordChangehandler);
     return () => {
-        DocMiniApp.Record.offRecordChange(recordChangehandler);    
+        DocMiniApp.Record.offRecordChange(recordChangehandler);
     };
 });
 ```

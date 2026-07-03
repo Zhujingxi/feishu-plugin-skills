@@ -42,7 +42,7 @@ tt.getTriggerContext({
     fail (res) {
         console.log(res);
     }
-}) 
+})
 ```
 
 `success`返回对象示例：

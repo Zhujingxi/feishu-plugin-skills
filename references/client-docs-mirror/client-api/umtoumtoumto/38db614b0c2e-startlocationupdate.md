@@ -12,7 +12,7 @@ startLocationUpdate(Object object) 用于在开启小程序或网页应用，且
 
 - 调用前需要用户授权 `scope.userLocation`。如何授权可参见 [API 权限](https://open.feishu.cn/document/uYjL24iN/uITMuITMuITM)。
 - 该 API 需要用户在系统设置内对飞书授予地理位置权限后方可调用，位置精度和调用耗时会因设备而异。
-- 当程序在后台时，会暂停定位，切回前台后，会恢复定位。  
+- 当程序在后台时，会暂停定位，切回前台后，会恢复定位。
 - 该 API 会调用设备 GPS、蜂窝定位等能力，长时间开启可能会引起设备过热、耗电量增加。
 
 ## 支持说明

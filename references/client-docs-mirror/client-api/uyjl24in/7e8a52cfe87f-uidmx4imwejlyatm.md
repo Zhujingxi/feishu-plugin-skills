@@ -131,7 +131,7 @@ trace | string | 请求 ID，用于请求问题的诊断和全链路追踪。<br
     "errMsg": "request:fail CronetError(\"Cronet Error: code=1 / internal_code=-105 / None\")",
     "trace": "xxxxx"
 }
-``` 
+```
 
 ## 错误码
 

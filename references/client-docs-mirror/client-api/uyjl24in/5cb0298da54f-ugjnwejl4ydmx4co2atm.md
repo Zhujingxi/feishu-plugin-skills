@@ -60,7 +60,7 @@ tt.getImageInfo({
   "errMsg": "getImageInfo:ok",
   "path": "ttfile://temp/1637490835010.png"
 }
-``` 
+```
 
 ## 错误码
 

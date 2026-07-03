@@ -42,14 +42,14 @@ A :假设我们需要调试的 web-view 是这样的
 
 ## Q: "Error: [BABEL] unknown: Preset /* your preset */ requires a filename to be set when babel is called directly"
 
-影响版本：```opdev 1.10.0```   
-出现如下错误：  
-![Lark20210302-204046.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/3eaad8962466c5e1ad44b8872e0ad37e_z72LqyRQHO.png?height=286&lazyload=true&width=750)  
-**A:**  
-检查 opdev 命令执行所在的路径下是否有 babel 相关配置，该配置会和 v1.10.0 版本的 opdev 编译小程序用的 babel 配置产生冲突，换个干净的目录执行 opdev 命令；   
+影响版本：```opdev 1.10.0```
+出现如下错误：
+![Lark20210302-204046.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/3eaad8962466c5e1ad44b8872e0ad37e_z72LqyRQHO.png?height=286&lazyload=true&width=750)
+**A:**
+检查 opdev 命令执行所在的路径下是否有 babel 相关配置，该配置会和 v1.10.0 版本的 opdev 编译小程序用的 babel 配置产生冲突，换个干净的目录执行 opdev 命令；
 
 ## Q:飞书更新到3.41版本后，如何在PC端调试小程序
-**A：** 
+**A：**
 飞书3.44版本及以后不可使用该功能，建议[调试指南](https://open.feishu.cn/document/uYjL24iN/ugDOzYjL4gzM24CO4MjN)中的真机调试功能。
 方案1，打开「调试工具」-->点击「预览」-->选择「PC端｜-->勾选「debug」-->选择合适的打开方式即可
 
@@ -246,12 +246,12 @@ fe80::1%lo0 localhost
 
 ## Q: 编译报错报文件找不到错误，怎么办？
 ```
-using some file not exist in /path/to/a.ttml 
-/path/to/a.ttml need /path/to/b.wxml but not found 
+using some file not exist in /path/to/a.ttml
+/path/to/a.ttml need /path/to/b.wxml but not found
 ```
-**A:** 
-- 查看文件引入路径和文件实际名称是否一致，是否存在大小写不一致情况。       
-- 如果引用的路径是来自 `npm` 包，需要开启`使用 npm` 功能，见 [npm 支持](https://open.feishu.cn/document/uYjL24iN/uEzMzUjLxMzM14SMzMTN/npm-support)。                              
+**A:**
+- 查看文件引入路径和文件实际名称是否一致，是否存在大小写不一致情况。
+- 如果引用的路径是来自 `npm` 包，需要开启`使用 npm` 功能，见 [npm 支持](https://open.feishu.cn/document/uYjL24iN/uEzMzUjLxMzM14SMzMTN/npm-support)。
 - 编译工具会精确匹配到依赖的文件后缀，出现此类情况是因为 `/path/to/a.ttml` 文件中出现了类似如下的代码 `<import src="/path/to/b.wxml" />`，但是实际的文件为`/path/to/b.ttml`，后缀不一致导致错误。如果你是使用第三方框架（例如 Taro）进行开发，请升级到对应最新的框架。如果是自己组织代码，请调整引用和实际文件相匹配。
 
 ## Q: 在 Windows 系统中如何运行 shell 脚本？

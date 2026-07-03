@@ -58,7 +58,7 @@ nfcAdapter.onDiscovered(function(res) {
         }
     ]
 }
-``` 
+```
 
 ## 错误码
 `fail`返回对象中会包含[errno属性](https://open.feishu.cn/document/uYjL24iN/uAjMuAjMuAjM/errno)，代表错误码。

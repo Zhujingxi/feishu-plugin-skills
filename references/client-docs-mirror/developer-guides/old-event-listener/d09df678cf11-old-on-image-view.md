@@ -15,12 +15,12 @@ myComponent.event.onImageView(function(data) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |data|	Object | 响应数据 参数参见下表 **data** |
 
 ### data
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |key|	String|	图片id
 |url|	String|	图片地址
 |blob|	Blob|	图片blob类型数据 需要设置needBlob为true

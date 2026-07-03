@@ -41,7 +41,7 @@ stepCount | number | 设备当前步数。
 调用示例：
 
 ```js
-tt.getStepCount({ 
+tt.getStepCount({
     success(res) {
       console.log(JSON.stringify(res));
     },

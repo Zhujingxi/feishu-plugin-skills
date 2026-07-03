@@ -63,7 +63,7 @@ abstract fun checkLarkStatus(**@** **NonNull** callback: IPassportApi.Callback)
 
 ##### getDeviceId
 
-**@** **NonNull** 
+**@** **NonNull**
 
 abstract fun getDeviceId(): String
 
@@ -75,7 +75,7 @@ abstract fun getDeviceId(): String
 
 ##### getSid
 
-**@** **NonNull** 
+**@** **NonNull**
 
 abstract fun getSid(): String
 

@@ -74,7 +74,7 @@ tt.chooseImage({
   "errMsg": "chooseImage:ok"
 }
 
-``` 
+```
 
 ## 错误码
 

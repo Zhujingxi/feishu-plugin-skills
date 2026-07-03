@@ -172,8 +172,8 @@ interface ISingleLinkFieldConfig extends IBaseFieldConfig{
 	type: FieldType.SingleLink,
 	name:string,
 	property?: {
-    	tableId: string;
-  		multiple?: boolean;
+	tableId: string;
+		multiple?: boolean;
 	}
 }
 ```

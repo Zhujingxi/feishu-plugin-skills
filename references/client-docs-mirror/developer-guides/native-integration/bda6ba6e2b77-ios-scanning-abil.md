@@ -19,8 +19,8 @@ import LKQRCodeExternal
 import LKKABridge
 
 // 自定义的`KAQRCodeApiDelegate`实现类
-public class LKQRCodeExternalIMP: KAQRCodeApiDelegate {    
-    func interceptHandle(result: String) -> Bool { ... }  
+public class LKQRCodeExternalIMP: KAQRCodeApiDelegate {
+    func interceptHandle(result: String) -> Bool { ... }
     func handle(result: String) -> Bool { ... }
 }
 

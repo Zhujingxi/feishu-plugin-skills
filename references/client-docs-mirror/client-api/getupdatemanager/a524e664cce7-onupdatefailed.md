@@ -29,16 +29,16 @@ callback | function | 是 | &nbsp; | 小程序更新失败事件的回调函数
 try {
       const updateManager = tt.getUpdateManager()
       updateManager.onCheckForUpdate(function (res) {
-      	// 请求完新版本信息的回调
-     	 console.log(res.hasUpdate)
+	// 请求完新版本信息的回调
+	 console.log(res.hasUpdate)
       })
       updateManager.onUpdateReady(function () {
        // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-       	updateManager.applyUpdate()
+	updateManager.applyUpdate()
       })
       updateManager.onUpdateFailed(function () {
-     	// 新版本下载失败
-      	console.log('download error');
+	// 新版本下载失败
+	console.log('download error');
       })
       // 每隔一个小时主动检查更新一次
       setInterval(() => updateManager.triggerCheckUpdate(), 60*60*1000)

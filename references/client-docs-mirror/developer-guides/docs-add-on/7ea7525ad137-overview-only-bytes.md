@@ -149,5 +149,5 @@ npm run upload
 - 是，业务需要使用 User Access Token 调用 OpenAPI ，则调整产品逻辑以获取支持调用 OpenAPI 的 User Access Token。
 
 ### 如何调整产品逻辑？
-**方案1 ：** 将应用授权逻辑调整为在小组件内跳转到第三方页面，在第三方页面完成授权。可参考 [开发文档 - 飞书开放平台](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/login-overview)，在小组件内添加跳转能力，跳转至第三方页面引导用户授权后提供相关功能。   
+**方案1 ：** 将应用授权逻辑调整为在小组件内跳转到第三方页面，在第三方页面完成授权。可参考 [开发文档 - 飞书开放平台](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/login-overview)，在小组件内添加跳转能力，跳转至第三方页面引导用户授权后提供相关功能。
 **方案2：** [使用小程序API](https://open.feishu.cn/document/uYjL24iN/ukjM04SOyQjL5IDN)获取 openID，并使用 tenant access token 调用 OpenAPI 执行其他操作，可参考  [示例](https://open.feishu.cn/document/uAjLw4CM/uYjL24iN/docs-add-on/05-api-doc/basic-data-reference---base/Service.User.login)。

@@ -22,7 +22,7 @@ translation | number | 是 | / | 在 Y 轴平移的距离，单位为 px
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

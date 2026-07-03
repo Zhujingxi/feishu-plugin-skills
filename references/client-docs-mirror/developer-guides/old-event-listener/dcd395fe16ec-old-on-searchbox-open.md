@@ -14,11 +14,11 @@ myComponent.event.onSearchBoxOpen(function(data) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |data|	Object | 响应数据 参数参见下表 **data** |
 
 ### data
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |duration|	Number|	用户第一次按下打开按钮，到搜索面板打开的间隔时间（如果这个期间内按下很多次，也只记录第一次)
 |openTimes|	Number|	用户第几次打开面板

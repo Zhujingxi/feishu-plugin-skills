@@ -17,7 +17,7 @@ myComponent.invoke(DocComponentEvent.ADD_NEW_COMMENT, {
   const { code, msg, data } = response;
 
 const {
-      commentId 
+      commentId
   } = data;
   // ...
 });
@@ -31,7 +31,7 @@ myComponent.invoke('ADD_NEW_COMMENT', {
   const { code, msg, data } = response;
 
 const {
-      commentId 
+      commentId
   } = data;
   // ...
 });

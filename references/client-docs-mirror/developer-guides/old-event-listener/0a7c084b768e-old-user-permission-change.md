@@ -14,12 +14,12 @@ myComponent.event.onAuthChange(function(auth) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |auth|	Object |用户权限|
 
 ### auth
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |owner|	Boolean|	是否为文档所有者
 |readable|	Boolean|	是否有文档阅读权限
 |editable|	Boolean|	是否有文档编辑权限

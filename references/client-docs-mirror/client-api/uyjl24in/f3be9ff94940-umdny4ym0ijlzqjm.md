@@ -58,7 +58,7 @@ tt.showLoading({
 {
     "errMsg": "showLoading:ok"
 }
-``` 
+```
 
 ## 错误码
 

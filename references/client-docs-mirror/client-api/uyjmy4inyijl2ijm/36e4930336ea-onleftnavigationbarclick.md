@@ -37,14 +37,14 @@ tt.setNavigationBar({
         items: [
             // 显示文本
             {id: "left_one", text: "left_xxx"}
-        ]            
+        ]
     } ,
     success(res) {
         console.log("success");
     },
     fail(res) {
         console.log(`${JSON.stringify(res)}`);
-    }                 
+    }
 
 });
 

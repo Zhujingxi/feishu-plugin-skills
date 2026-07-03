@@ -116,11 +116,11 @@ Page({
 
 ```javascript
 // index.js
-Page({ 
-  data: { 
-    text: 'init data', 
-    array: [{msg: '1'}, {msg: '2'}] 
-  } 
+Page({
+  data: {
+    text: 'init data',
+    array: [{msg: '1'}, {msg: '2'}]
+  }
 })
 ```
 
@@ -138,10 +138,10 @@ Page 中支持定义一些特殊的函数：事件处理函数。在渲染层的
 
 ```javascript
 // index.js
-Page({ 
-  viewTap: function() { 
-    console.log('view tap') 
-  } 
+Page({
+  viewTap: function() {
+    console.log('view tap')
+  }
 })
 ```
 

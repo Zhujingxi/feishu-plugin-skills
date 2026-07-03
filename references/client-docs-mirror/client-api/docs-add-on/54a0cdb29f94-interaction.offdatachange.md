@@ -47,7 +47,7 @@ const interactionDataChangehandler = (interactionData: any) => {
 useEffect(() => {
     DocMiniApp.Interaction.onDataChange(interactionDataChangehandler);
     return () => {
-        DocMiniApp.Interaction.offDataChange(interactionDataChangehandler);    
+        DocMiniApp.Interaction.offDataChange(interactionDataChangehandler);
     };
 });
 ```

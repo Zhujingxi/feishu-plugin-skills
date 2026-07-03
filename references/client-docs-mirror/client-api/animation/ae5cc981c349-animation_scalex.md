@@ -22,7 +22,7 @@ scale | number | 是 | / | x 轴的缩放倍数
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

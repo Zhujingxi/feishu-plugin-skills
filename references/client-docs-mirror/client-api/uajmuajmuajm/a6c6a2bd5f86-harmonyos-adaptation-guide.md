@@ -44,7 +44,7 @@ const isHarmony = /OpenHarmony/i.test(navigator.userAgent)
 
 小程序中通过读取 [getSystemInfo](https://open.feishu.cn/document/uYjL24iN/uQjNx4CN2EjL0YTM) 中的 platform 来判断是否鸿蒙系统。
 ```
- // 小程序通过读取getSystemInfo中的platform来判断是否鸿蒙系统。 
+ // 小程序通过读取getSystemInfo中的platform来判断是否鸿蒙系统。
 const systemInfo = tt.getSystemInfoSync();
 const isHarmony = systemInfo.platform === 'openharmony';
 ```

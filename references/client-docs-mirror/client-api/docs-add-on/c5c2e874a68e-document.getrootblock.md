@@ -45,7 +45,7 @@ console.log('debug', rootblock);
     "data": {plain_text: '云文档小应用测试页面', text: {…}}
     "id": 1
     "recordId": "recordId"
-    "ref": 
+    "ref":
     "blockId" : 1
     "docRef" : {"docToken": 'docx token'}
     "type": "page"

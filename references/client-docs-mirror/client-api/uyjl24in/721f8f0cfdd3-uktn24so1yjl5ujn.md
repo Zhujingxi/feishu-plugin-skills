@@ -59,14 +59,14 @@ tt.filePicker({
 });
 
 // 打开云空间文档
-tt.openDocument({ 
+tt.openDocument({
   filePath: "cloudFilePath", // 云空间文档链接
   fileType: "cloudFile",
   success(res) {
-    console.log(JSON.stringify(res)); 
+    console.log(JSON.stringify(res));
   },
-  fail(res) { 
-    console.log(`openDocument fail: ${JSON.stringify(res)}`); 
+  fail(res) {
+    console.log(`openDocument fail: ${JSON.stringify(res)}`);
   },
 })
 ```

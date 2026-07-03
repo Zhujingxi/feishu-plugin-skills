@@ -22,7 +22,7 @@ overflow: visible hidden;
 
 ### 取值
 
--   `hidden`  
+-   `hidden`
 
 **默认值** 超出元素框的内容默认会被裁剪。
 

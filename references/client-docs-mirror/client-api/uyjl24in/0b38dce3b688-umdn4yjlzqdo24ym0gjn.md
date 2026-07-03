@@ -33,7 +33,7 @@ NFCAdapter.stopDiscovery(Object object) 用于关闭 NFC 标签扫描。
 
 ```js
 let adapter = tt.getNFCAdapter()
-adapter.stopDiscovery({ 
+adapter.stopDiscovery({
     success(res) {
       console.log(JSON.stringify(res));
     },

@@ -52,7 +52,7 @@ tt.grantScreenShot({
 {
     "errMsg": "grantScreenShot:ok"
 }
-``` 
+```
 
 ## 错误码
 

@@ -28,25 +28,25 @@ view 组件不支持直接嵌套文字。
 <md-block>
   <md-block-entity>
 {
-    "blockID": "mock-blockID", 
-	"blockTypeID": "blk_610a0f3659c04004c56b2b90", 
+    "blockID": "mock-blockID",
+	"blockTypeID": "blk_610a0f3659c04004c56b2b90",
     "sourceMeta": {
 
-}, 
+},
     "sourceData": {
-    	"tab": "component",
-    	"item": "view",
-    	"isNew": true
+	"tab": "component",
+	"item": "view",
+	"isNew": true
     }
 }
 </md-block-entity>
   <md-block-appLink>
 {
-    "openDetail": 1, 
-    "title": "view", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22view%22%7D", 
+    "openDetail": 1,
+    "title": "view",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22view%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {
@@ -55,7 +55,7 @@ view 组件不支持直接嵌套文字。
             "item": "view",
             "isNew": true
         },
-  		"blockID": "mock-block"
+		"blockID": "mock-block"
     }
 }
 </md-block-appLink>
@@ -271,18 +271,18 @@ view 组件不支持直接嵌套文字。
 }
 
 .property-container {
-  margin-top: 24px; 
-  padding-left: 16px; 
-  box-sizing: border-box; 
-  border-top: 0.5px solid rgba(31, 35, 41, 0.15); 
-  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15); 
-  display: flex; 
+  margin-top: 24px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  border-top: 0.5px solid rgba(31, 35, 41, 0.15);
+  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15);
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .property-container-bg {
-  background: white; 
+  background: white;
 }
 
 .m-picker-choose {

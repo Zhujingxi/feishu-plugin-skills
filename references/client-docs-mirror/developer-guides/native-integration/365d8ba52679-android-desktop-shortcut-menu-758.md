@@ -39,7 +39,7 @@ class OnloadModuleImpl : IOnloadGlobalModule {
 
 ## INTERFACE
 ### IShortcutApi
-飞书开放桌面快捷方式菜单入口，通过该 API 开发者可以集成自有菜单到飞书桌面快捷方式  
+飞书开放桌面快捷方式菜单入口，通过该 API 开发者可以集成自有菜单到飞书桌面快捷方式
 **注意**：能展示的快捷菜单数量是有限的，在不同的系统启动器上有不同的限制，而且飞书内置的快捷菜单优先级更高
 
 ```kotlin

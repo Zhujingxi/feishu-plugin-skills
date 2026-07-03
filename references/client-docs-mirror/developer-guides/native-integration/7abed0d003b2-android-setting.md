@@ -59,7 +59,7 @@ abstract fun getConfig(namespace: String, key: String): Map&lt;String, Any&gt;
 
 annotation class SettingImpl
 
-标记 ISettingApi 的实现类。 
+标记 ISettingApi 的实现类。
 
 仅供飞书侧使用
 

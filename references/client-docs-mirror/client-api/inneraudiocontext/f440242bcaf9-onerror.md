@@ -23,12 +23,12 @@ callback | function | 是 | &nbsp; | 该事件的回调函数
 
 ## 输出
 回调函数返回对象的属性：
-```javascript 
+```javascript
 interface OnErrorDetail {
     errno: number;
     errString: string;
 }
-``` 
+```
 |errno|errString|含义|
 |--|--|------|
 |1303101|Unable to play. Audio src is invalid|src 为空或不合法|

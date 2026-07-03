@@ -26,5 +26,5 @@ myComponent.register('ON_ACTIVE_COMMENT', function(eventData) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |commentId|String |评论 id 或临时评论id

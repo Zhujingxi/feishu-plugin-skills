@@ -31,7 +31,7 @@ available | boolean | 蓝牙适配器是否可用
 ## 示例代码
 
 ```js
-tt.getBluetoothAdapterState({ 
+tt.getBluetoothAdapterState({
     success(res) {
       console.log(JSON.stringify(res));
     },

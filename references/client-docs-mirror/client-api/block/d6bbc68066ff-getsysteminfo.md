@@ -17,7 +17,7 @@ param 继承自[标准对象输入](https://open.feishu.cn/document/uAjLw4CM/uYj
 success 函数返回对象参数扩展属性：
 
 | **名称**           | **数据类型**           | **描述**     |
-| ---------------- | ---------------- | ---------- | 
+| ---------------- | ---------------- | ---------- |
 | platform         | 枚举 | 平台信息包括'pc' \| 'mobile' \| 'android' \| 'ios', 其中，pc & mobile 适用于网页环境，android & ios 适用于移动端 Native 环境      | 1.0.0 |
 | host | string   | 宿主标识      | 1.0.0 |
 | blockitVersion | string   | block基础库版本      | 1.0.0 |
@@ -39,14 +39,14 @@ success 函数返回对象参数扩展属性：
 ```json
 {
   "sourceData":{
-  	"tab": "api",
-  	"item": "getSystemInfo"
+	"tab": "api",
+	"item": "getSystemInfo"
   },
-    "openDetail": 1, 
-    "title": "getSystemInfo", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D", 
+    "openDetail": 1,
+    "title": "getSystemInfo",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {
@@ -55,7 +55,7 @@ success 函数返回对象参数扩展属性：
             "item": "getSystemInfo",
             "isNew": true
         },
-  		"blockID": "mock-block"
+		"blockID": "mock-block"
     }
 }
 ```
@@ -70,7 +70,7 @@ tt.getSystemInfo({
   },
   complete (res) {
     console.log('getSystemInfo 调用结束', res.errMsg);
-  } 
+  }
 });
 ```
 

@@ -14,5 +14,5 @@ myComponent.event.onTitleChange(function(title) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |title|	String |文档标题|

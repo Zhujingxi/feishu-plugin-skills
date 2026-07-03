@@ -84,6 +84,19 @@ npx skills add https://github.com/Zhujingxi/feishu-plugin-skills --skill feishu-
 npx skills add . --skill feishu-plugin-development
 ```
 
+## Local documentation search
+
+The official Feishu/Lark pages are mirrored under `references/client-docs-mirror/` for agents that cannot reliably open external documentation links. Search the mirror instead of loading it wholesale:
+
+```bash
+rg -ni "base extension|bitable|opdev|automation action" references/client-docs-mirror references/client-docs-source-catalog.md
+rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/client-docs-mirror
+rg -ni "docs add-on|document widget|workplace block|block runtime" references/client-docs-mirror references/client-docs-source-catalog.md
+python scripts/crawl_client_docs.py --validate
+```
+
+Authored skill files stay in English. The generated upstream documentation mirror preserves official source-language content and uses ASCII-safe local paths.
+
 ## Updating
 
 Use the Skills CLI update flow, or reinstall from the repository:

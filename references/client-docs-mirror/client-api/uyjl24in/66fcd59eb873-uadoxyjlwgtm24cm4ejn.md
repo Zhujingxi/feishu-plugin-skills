@@ -44,7 +44,7 @@ tt.onBluetoothAdapterStateChange(function (res) {
   "discovering":true,
   "available",true
 }
-``` 
+```
 
 ## 错误码
 

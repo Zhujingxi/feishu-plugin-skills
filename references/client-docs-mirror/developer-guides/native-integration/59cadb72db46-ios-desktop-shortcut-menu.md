@@ -19,7 +19,7 @@ import LKShortcutExternal
 import LKKABridge
 
 // 自定义的`KAShortcutProtocol`实现类
-class LKShortcutExternalIMP: KAShortcutProtocol {    
+class LKShortcutExternalIMP: KAShortcutProtocol {
     var type: String { ... }
     var icon: UIApplicationShortcutIcon { ... }
     var localizedTitle: String { ... }

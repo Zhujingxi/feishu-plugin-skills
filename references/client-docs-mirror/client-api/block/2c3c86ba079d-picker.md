@@ -33,25 +33,25 @@ mode默认属性为普通选择器。
 <md-block>
 <md-block-entity>
 {
-    "blockID": "mock-blockID", 
-	"blockTypeID": "blk_610a0f3659c04004c56b2b90", 
+    "blockID": "mock-blockID",
+	"blockTypeID": "blk_610a0f3659c04004c56b2b90",
     "sourceMeta": {
 
-}, 
+},
     "sourceData": {
-    	"tab": "component",
-    	"item": "picker",
-    	"isNew": true
+	"tab": "component",
+	"item": "picker",
+	"isNew": true
     }
 }
 </md-block-entity>
  <md-block-appLink>
 {
-    "openDetail": 1, 
-    "title": "picker", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22getSystemInfo%22%7D", 
+    "openDetail": 1,
+    "title": "picker",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22getSystemInfo%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {
@@ -60,7 +60,7 @@ mode默认属性为普通选择器。
             "item": "picker",
             "isNew": true
         },
-  		"blockID": "mock-block"
+		"blockID": "mock-block"
     }
 }
 </md-block-appLink>
@@ -191,18 +191,18 @@ mode默认属性为普通选择器。
 }
 
 .property-container {
-  margin-top: 24px; 
-  padding-left: 16px; 
-  box-sizing: border-box; 
-  border-top: 0.5px solid rgba(31, 35, 41, 0.15); 
-  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15); 
-  display: flex; 
+  margin-top: 24px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  border-top: 0.5px solid rgba(31, 35, 41, 0.15);
+  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15);
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .property-container-bg {
-  background: white; 
+  background: white;
 }
 
 ```
@@ -258,7 +258,7 @@ Block({
     const { value } = e.detail;
     const { key } = e.currentTarget.dataset;
     const { commonData } = this.data;
-    commonData.elements[key].value = value; 
+    commonData.elements[key].value = value;
     this.setData({
       commonData
     });

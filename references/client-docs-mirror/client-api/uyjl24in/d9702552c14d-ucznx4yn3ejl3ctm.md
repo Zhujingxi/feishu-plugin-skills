@@ -38,7 +38,7 @@ data | string | 粘贴板数据。
 调用示例：
 
 ```js
-tt.getClipboardData({ 
+tt.getClipboardData({
     success(res) {
       console.log(JSON.stringify(res));
     },

@@ -35,7 +35,7 @@ authSetting | object | 展示用户设置（包括授予和拒绝）过的权限
 ## 示例代码
 
 ```js
-tt.openSetting({ 
+tt.openSetting({
     success(res) {
       console.log(JSON.stringify(res));
     },

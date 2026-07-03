@@ -113,7 +113,7 @@ tt.sendMessageCard({
     "errCode": -4,
     "errMsg": "sendMessageCard:fail"
 }
-``` 
+```
 
 ## 错误码
 

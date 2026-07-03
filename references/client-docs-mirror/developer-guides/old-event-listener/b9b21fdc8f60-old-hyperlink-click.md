@@ -15,5 +15,5 @@ myComponent.event.onHyperlinkClick(function(url) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |url|String |超链接地址

@@ -114,7 +114,7 @@ class SpiManager
 
 ```kotlin
 
-fun main() { 
+fun main() {
     val spi = SpiManager.getInstance().getSpi() ?: throw IllegalStateException("ISpiApi not initialized")
 
 try {

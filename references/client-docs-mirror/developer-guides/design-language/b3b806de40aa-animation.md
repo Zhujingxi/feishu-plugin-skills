@@ -98,7 +98,7 @@ td {
 
 交互动画(如弹窗、页面转场)通常需要开发人员根据设计参数在不同的平台上实现。
 
-### 交互类动画的设计 
+### 交互类动画的设计
 
 一般使用可交互原型工具制作，如 [Origami Studio](https://origami.design/)、[Principle](https://principleformac.com/) 及 [Framer](https://www.framer.com/) 等。
 

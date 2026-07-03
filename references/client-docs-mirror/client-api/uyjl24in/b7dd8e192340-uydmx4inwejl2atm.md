@@ -94,7 +94,7 @@ trace | string | 请求 ID，用于请求问题的诊断和全链路追踪。<br
     "trace": "021638203108547b7613bd1ebe5586ea6f58e17a92f1544eebbbb",
     "errMsg": "uploadFile:ok"
 }
-``` 
+```
 
 `fail`返回对象示例：
 
@@ -103,7 +103,7 @@ trace | string | 请求 ID，用于请求问题的诊断和全链路追踪。<br
   "errMsg": "uploadFile:fail timeout",
   "trace": "xxxxx"
 }
-``` 
+```
 
 ## 错误码
 

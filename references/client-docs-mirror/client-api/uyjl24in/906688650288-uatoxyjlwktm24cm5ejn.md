@@ -39,7 +39,7 @@ services | object[] | 已发现的设备服务列表。
 tt.getBLEDeviceServices({
       deviceId: 'E5:66:9F:82:46:61',
       success: (res) => {
-  		console.log(JSON.stringify(res));
+		console.log(JSON.stringify(res));
       },
       fail: (error) => {
         console.log('getBLEDeviceServices fail:${JSON.stringify(res)}');
@@ -59,7 +59,7 @@ tt.getBLEDeviceServices({
     }
   ]
 }
-``` 
+```
 `fail`返回对象示例：
 ```json
 {

@@ -39,16 +39,16 @@ dark | object[] | 是 | &nbsp; | 夜间模式数据
 
 ```js
 tt.addTabBarItem({
-    index: 1, 
-    pagePath:"pages/index/index", 
-    text: "text", 
+    index: 1,
+    pagePath:"pages/index/index",
+    text: "text",
     light: {
-      iconPath: "xx", 
-      selectedIconPath: "xx" 
+      iconPath: "xx",
+      selectedIconPath: "xx"
     },
     dark: {
-      iconPath: "xx", 
-      selectedIconPath: "xx" 
+      iconPath: "xx",
+      selectedIconPath: "xx"
     },
     success(res) {
       console.log(JSON.stringify(res));
@@ -87,7 +87,7 @@ tt.addTabBarItem({
 | `-20001` | no current tab controller                   |Tab fragment为空                          |
 | `-20002` | no current app view proxy                   | Tab fragment的activity为空                 |
 |` -20003` | only support in gadget                      |不是小程序形态 |
-| `-20004` | no tab host                                 | Tab host初始化错误|                          
+| `-20004` | no tab host                                 | Tab host初始化错误|
 | `-20005` | add target tab fail, cannot find target tab| 添加tabwidget时发生错误|
 
 ## 已知问题

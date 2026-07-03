@@ -141,7 +141,7 @@ h5Manager.onTransferMessage(function (res) {
 **只有PC有channel**
 ```
 {
-    "channel": "MESSAGE_CHANNEL_WEBVIEW_cZ1NK3brvp_0", 
+    "channel": "MESSAGE_CHANNEL_WEBVIEW_cZ1NK3brvp_0",
     "data": {
         "test": "b"
     }
@@ -173,7 +173,7 @@ messageManager.onTransferMessage(function(resp) {
 ```
 或者可以选择兼容的方式：
 ```
-messageManager.onTransferMessage(function(resp) {			
+messageManager.onTransferMessage(function(resp) {
     const data = res.data ? res.data : res
 })
 ```

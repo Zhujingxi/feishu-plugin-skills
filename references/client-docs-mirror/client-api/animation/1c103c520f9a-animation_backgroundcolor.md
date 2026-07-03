@@ -23,7 +23,7 @@ value | string | 是 | / | 颜色值
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

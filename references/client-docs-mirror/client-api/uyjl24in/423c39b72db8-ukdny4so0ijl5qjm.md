@@ -63,7 +63,7 @@ tt.showActionSheet({
     "errMsg": "showActionSheet:ok",
     "tapIndex": 1
 }
-``` 
+```
 
 ## 错误码
 

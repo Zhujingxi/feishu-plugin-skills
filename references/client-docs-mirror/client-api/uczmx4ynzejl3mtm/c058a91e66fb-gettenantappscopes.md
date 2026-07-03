@@ -38,7 +38,7 @@ scopes | scope[] | 权限列表。
 调用示例：
 
 ```js
-tt.getTenantAppScopes({ 
+tt.getTenantAppScopes({
     success(res) {
       console.log(JSON.stringify(res));
     },

@@ -41,8 +41,8 @@ adapter.onDiscovered(
                 fail(err) {
                     console.log(`MifareClassic.connect fail: ${JSON.stringify(res)}`)
                 }
-            });   
-        }   
+            });
+        }
     }
 );
 ```

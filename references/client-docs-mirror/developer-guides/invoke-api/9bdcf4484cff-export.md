@@ -22,11 +22,11 @@ myComponent.invoke('EXPORT_BY_TYPE', 'pdf').then(function(response) {
 
 ## 参数
 |属性|	类型|	是否必须	|说明|
-| ---|----- | -------|------ | 
+| ---|----- | -------|------ |
 |format|	String	|是|	导出格式
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |

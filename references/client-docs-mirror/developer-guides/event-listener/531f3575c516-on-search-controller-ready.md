@@ -19,11 +19,11 @@ myComponent.register('SEARCH_CONTROLLER_READY', function(data) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |data|	Object | 响应数据 参数参见下表 **data** |
 
 ### data
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |searchReadyTime|	Number|	加载完成时间
 |trigger_before_didmount|	Boolean|	用户是否先于默认生命周期点击触发搜索面板

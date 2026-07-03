@@ -31,11 +31,11 @@ param 继承自[标准对象输入](https://open.feishu.cn/document/uAjLw4CM/uYj
           "tab": "api",
           "item": "showToast"
   },
-    "openDetail": 1, 
-    "title": "showToast", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D", 
+    "openDetail": 1,
+    "title": "showToast",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22api%22%2C%22item%22%3A%22login%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {

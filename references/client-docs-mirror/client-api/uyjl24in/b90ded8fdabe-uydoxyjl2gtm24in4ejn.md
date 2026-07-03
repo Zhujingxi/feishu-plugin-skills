@@ -31,7 +31,7 @@ closeBluetoothAdapter(Object object) 该接口用于关闭蓝牙模块。
 调用示例：
 
 ```js
-tt.closeBluetoothAdapter({ 
+tt.closeBluetoothAdapter({
     success(res) {
       console.log(JSON.stringify(res));
     },

@@ -39,5 +39,5 @@ yourScrollContainer.addEventListener('scroll', (e) => {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |height|String |文档高度|

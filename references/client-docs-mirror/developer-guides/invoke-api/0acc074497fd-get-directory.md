@@ -25,14 +25,14 @@ myComponent.invoke('GET_DIRECTORY_DATA').then(function(response) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |
 |data|Array|目录列表|
 
 ### data item
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |anchor|	String  |	锚点 hash 值 (初始化时获取的数据不包含此项)
 |text|	String| 目录标题
 |indentLevel|	Number|	缩进等级

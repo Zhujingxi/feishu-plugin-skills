@@ -19,7 +19,7 @@ import LKVideoChatExternal
 import LKKABridge
 
 // 自定义的`KAVideoChatDelegate`实现类
-class LKVideoChatExternalIMP: KAVideoChatDelegate {    
+class LKVideoChatExternalIMP: KAVideoChatDelegate {
     func onStart(meeting: KAMeeting) { ... }
     func onStop(meeting: KAMeeting) { ... }
     func onFloatWindowStart(meeting: KAMeeting) { ... }

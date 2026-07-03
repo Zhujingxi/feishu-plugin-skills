@@ -66,7 +66,7 @@ tt.readBLECharacteristicValue({
   },
   "errMsg": "readBLECharacteristicValue:ok",
 }
-``` 
+```
 
 `fail`返回对象示例：
 ```json

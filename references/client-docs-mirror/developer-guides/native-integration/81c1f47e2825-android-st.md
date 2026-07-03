@@ -249,7 +249,7 @@ abstract fun remove(key: String)
 
 annotation class KVStorageImpl
 
-标记 IKVStorageApi 的实现类。 
+标记 IKVStorageApi 的实现类。
 
 仅供飞书侧使用
 

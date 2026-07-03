@@ -14,11 +14,11 @@ myComponent.invoke.scrollTo(value).then(function(response) {
 
 ## 参数
 |属性|	类型|	是否必须	|说明|
-| ---|----- | -------|------ | 
+| ---|----- | -------|------ |
 |value|	Number	|是|	距离
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	成功返回**Success** 失败返回错误信息 |

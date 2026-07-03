@@ -215,7 +215,7 @@ connectSocket | long | 否 | 自定义 tt.connectSocket 的 timeout 时间，可
 networkTimeout 设置对小程序全局生效，无法只对某个页面生效，也无法只对某次 API 调用生效。app.json 配置示例如下：
 
 ```json
-"networkTimeout": {  
+"networkTimeout": {
   "request": 10000,
   "connectSocket": 10000,
   "uploadFile": 10000,

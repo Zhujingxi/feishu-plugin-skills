@@ -20,7 +20,7 @@ import LKKABridge
 
 // 自定义的`KAMenusProtocol`实现类
 @objc
-public class LKMenusExternalIMP: KAMenusProtocol {    
+public class LKMenusExternalIMP: KAMenusProtocol {
     var icon: UIImage = ...
     var label: String = ...
     func canInitialize(_ actionContext: LKMenusExternal.ActionContext) -> Bool { ... }

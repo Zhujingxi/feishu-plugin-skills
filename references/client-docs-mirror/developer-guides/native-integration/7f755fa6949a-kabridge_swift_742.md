@@ -106,10 +106,10 @@ public class LKVideoChatExternalIMP: KAVideoChatDelegate {
 api.register(videoChatDelegate: LKVideoChatExternalIMP.init, cache: true)
 
 // 注册安全管控协议实现
-public class LKPasteboardProtectionIMP: LKPasteboardProtectionDelegate {    
+public class LKPasteboardProtectionIMP: LKPasteboardProtectionDelegate {
     ...
 }
-public class LKSecurityEMMApiIMP: LKSecurityEMMApi {    
+public class LKSecurityEMMApiIMP: LKSecurityEMMApi {
     ...
 }
 api.register(pasteProtectionDelegate: LKPasteboardProtectionIMP.init)
@@ -129,45 +129,45 @@ message?.forward(...)
 ...
 
 // 存储 KV 能力
-let store = api.kvstore 
+let store = api.kvstore
 store?.has(...)
 ...
 
 // 网页能力
-let web_view_api = api.webViewApi 
+let web_view_api = api.webViewApi
 web_view_api?.setCookie(...)
 ...
 
 // 客户端 OpenAPI 能力
-let open_api = api.nativeAppOpenApi 
+let open_api = api.nativeAppOpenApi
 open_api?.invokeOpenApi(...)
 ...
 
 // 埋点能力
-let statistics = api.statistics 
+let statistics = api.statistics
 statistics?.initConfig(...)
 statistics?.sendEvent(...)
 ...
 
 // Passport 能力
-let passport = api.passport 
+let passport = api.passport
 passport?.getDeviceId(...)
-let operator = api.passportOperator 
+let operator = api.passportOperator
 operator?.logoutFeiShu(...)
 ...
 
 // Setting 能力
-let setting = api.settings 
+let setting = api.settings
 setting?.getConfig(...)
 ...
 
 // Logger 能力
-let logger = api.logger 
+let logger = api.logger
 logger?.info(...)
 ...
 
 // 安全管控能力
-let pasteboard = api.pasteboard 
+let pasteboard = api.pasteboard
 pasteboard?.getText(...)
 ...
 

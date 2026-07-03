@@ -74,7 +74,7 @@ td {
 
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b528fc57b50a13fc1c4e4893a5f4aff8_rYwAt7pbkb.png?height=1170&lazyload=true&maxWidth=800&width=1920)
 
-<br>  
+<br>
 **高度差异：** 类英语文字只占据部分字体框高度，而密集文字及高文字通常会占据整个字体框空间。因此，在同等字号下，中文泰语等文字会比英文显示更高。
 
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b09a0722a9e54e1fcf3a526c4742cf81_uWEzfRR0Xl.png?height=1170&lazyload=true&maxWidth=800&width=1920)
@@ -93,14 +93,14 @@ td {
 - 韩语词中也会利用隔写法，用空格分隔独立的语法单元以避免歧义。
 - 泰语单词间虽然没有明显空格划分，但作为表音文字，不同断句方式会产生完全不同的含义，在需要断句时一般会在词语边界处断开，以确保表意准确。
 
-<br> 
-**折行规则**<br> 
+<br>
+**折行规则**<br>
 当横向布局空间有限，文字需折行完整显示时，多语言存在不同的折行规则：
 日语在折行时，对于部分外来语音译词，需要注意尽量在完整语法语意单元或词语边界处折行，同时需遵守各自语言的折行和标点符号使用规则。不可用于句首及句尾的符号，在界面文案折行时，需根据标点符号位置规范，进行合理调整。
 
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/a963af666e8cf9220dc1bb33b6c6c265_VwrgorgYWx.png?height=1170&lazyload=true&width=1920)
 
-<br>  
+<br>
 
 英语及类英文语言折行需要按照完整单词为单位，一行剩余空间展示不全时，行尾单词整体转移到下一行显示。而一般不会在单词中间断开。
 

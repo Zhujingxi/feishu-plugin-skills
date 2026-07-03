@@ -20,5 +20,5 @@ myComponent.register('CURR_ANCHOR', function(anchor) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |anchor|	String |锚点 hash 值

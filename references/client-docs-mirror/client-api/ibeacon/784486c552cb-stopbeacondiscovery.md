@@ -33,13 +33,13 @@ tt.startBeaconDiscovery({
     ],
     ignoreBluetoothAvailable: true,
     success(res) {
-      tt.stopBeaconDiscovery({ 
-    	success(res) {
-      	  console.log(JSON.stringify(res));
-    	},
-    	fail(res) {
-      	  console.log(`stopBeaconDiscovery fail: ${JSON.stringify(res)}`);
-    	}
+      tt.stopBeaconDiscovery({
+	success(res) {
+	  console.log(JSON.stringify(res));
+	},
+	fail(res) {
+	  console.log(`stopBeaconDiscovery fail: ${JSON.stringify(res)}`);
+	}
 	    });
     },
     fail(res) {

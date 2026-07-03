@@ -38,31 +38,31 @@ var QRLoginObj = QRLogin({
 | `goto` | `string` | required | 授权页面地址。暂不支持新版登录流程，请参考旧版[登录流程](https://open.feishu.cn/document/common-capabilities/sso/web-application-sso/web-app-overview)
 | `width` | `string` | optional | 二维码展示区域的宽（二维码的尺寸固定为250px*250px) |
 | `height` | `string` | optional | 二维码展示区域的高 |
-| `style` | `string` | optional |  二维码展示区域的样式 | 
+| `style` | `string` | optional |  二维码展示区域的样式 |
 
 `window.QRLogin` 会返回一个方法 `matchOrigin` 用来校验域名是否匹配飞书的域名，并同时会返回一个方法 `matchData` 用来校验数据是否合法。
 
 通过如下方式监听用户扫码事件，当用户扫码并确认授权后，即可获取 `tmp_code`，开发者应将其拼接到入参中的 `goto` 参数后，并跳转到该地址：
 
 ```js
-var handleMessage = function (event) {         
+var handleMessage = function (event) {
     // 使用 matchOrigin 和 matchData 方法来判断 message 和来自的页面 url 是否合法
-    if(QRLoginObj.matchOrigin(event.origin) && QRLoginObj.matchData(event.data)) { 
-        var loginTmpCode = event.data.tmp_code; 
-      	// 在授权页面地址上拼接上参数 tmp_code，并跳转
+    if(QRLoginObj.matchOrigin(event.origin) && QRLoginObj.matchData(event.data)) {
+        var loginTmpCode = event.data.tmp_code;
+	// 在授权页面地址上拼接上参数 tmp_code，并跳转
         window.location.href = `${goto}&tmp_code=${loginTmpCode}`;
     }
 };
 
-if (typeof window.addEventListener != 'undefined') {   
-    window.addEventListener('message', handleMessage, false);} 
-else if (typeof window.attachEvent != 'undefined') { 
+if (typeof window.addEventListener != 'undefined') {
+    window.addEventListener('message', handleMessage, false);}
+else if (typeof window.attachEvent != 'undefined') {
     window.attachEvent('onmessage', handleMessage);
 }
 ```
 之后飞书 OAuth 服务端会返回一个 302 响应，将浏览器重定向到指定的 `redirect_uri` 地址，同时携带 `code`  和 `state` 查询参数。例如，假设你在 `goto` 参数中拼接的 `redirect_uri` 为 [https://example.com/api/oauth/callback/feishu](https://example.com/api/oauth/callback/feishu)，`state` 参数值为 `RANDOMSTRING`，则对应的 302 响应重定向地址为：
 ```
-https://example.com/api/oauth/callback/feishu?code=59bg7a22c77622sqp4c92bbd675954gg&state=RANDOMSTRING 
+https://example.com/api/oauth/callback/feishu?code=59bg7a22c77622sqp4c92bbd675954gg&state=RANDOMSTRING
 ```
 开发者应监听该地址的请求，从中解析出 `code` 以及 `state`：
 1. 其中的 `code` 参数即授权码，你可以使用该授权码调用[获取 user_access_token](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token)接口获取 `user_access_token`；

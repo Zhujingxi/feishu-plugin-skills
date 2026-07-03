@@ -52,7 +52,7 @@ tt.setNavigationBar({
             {id: "left_one", text: "left_xxx", imageBase64:"iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADn0lEQVRoge3ZS2hcVRzH8U/SakxSjSLUViWtqLFIqWgtYmPdRBGsiAsXLoSKBR9YofhYaFGsIijiwroSX9CFFFwoCuIDRFARg4IUS7W+KqKt+KzYqk3HcXGScOfcO3PvzL0zCdgvHMjJnPM7v3Pvef4vRznK/5u+CnXOw+W4ECtwOhahhl/xC3bhQ7yPj1GvqP2OGcS9+Fow007agy1Y0nPXCfrwgfbNJ9NBPIKRHnufZY0wTMp0oo4fMNFj77M8I4zz7diIdRjDsDDMThM6ugk7cEh2J2rYqqK5uQTj2ICH8AImhcl4XFR2GMe2oX0CbsF3sjvyNPo7Nb4K+5sIz6SlnYpHDApPfCqjjeeUeBOrsS9DdCadW8Z1Bpfg+4x27iojugxfZYjWsbaMcBPOxN6onSlc2qngycLEzOrA+pJmm3EGfo7a2qO9+TXLE5oPoesrMNuMCRyJ2rtz+rc1eBz35YmcisORyCf4d/rvTVW7jngyavsAvkjkV+cJbIkEfhOG1A1Cx3KfQEkukL0y1fFRXuU+6bPNA4nfJ3B/tX4RDn93CHtNqyX8pjyhlVGFGkajMsdU5TrBOcLaHw/dZPoDx+cJ3R5VeqcLZlsxim3CIS/uwFNFBHZElbZ2xWY+i/Ewfk94yZ28hAtHsgNXdslgUUZwD14rWiE+Qqzsjq/u8ZfGDiyeWzutyTqyHilQZt6wMON/U1F+qBdGmjAsBAhmOIjP8ip9qnEIXdYVa8VYH3l5MS6QNTx2R/lV1fsqzFiU3xkXyOrArig/l29gPMq/V6TSxRpf2z84sVpfhRjSuIkdkr6LZ9IvfScudbXrkI1yxn8rtkWV9+vtajSIbyMPV7UjMCp9KnywWo8teSxq+3MsaFdku/RcKHSYKsk66UjfdZ0ILRPO30mhvbobjD0LP0ZtvqlEfOjmSKwubHSnFKzfTjRhuXQY54D0ZaptnpfuxDdCHKcV5+PVgm2MSz/5Gq7twG+KAbwRif+Ek5qUXyhc+g/j5RztITwq+wJ/W1njSQbwSkK82cV6hcYLUbPb3Ajulh3crenSvrNAiFJPSh9B+rFZOmy+QQjHjAmfnzbjdfydYXzm0n51N8wniTe05Xi7iaF20ls4u9vms1gr7BGdGt+tw3W+Sm7Vnuk/8RKuUPJrTFWfWeFZ3JjI7xO+exHmxpfTaRLvCm9tXjGgcQXKDQHOR5YKT72Oi+bYS8eMC8vkork2UoZretXQf4MZqV9JCxyjAAAAAElFTkSuQmCC" },
             // 显示文本
             {id: "left_two", text: "left_xxx"}
-        ]            
+        ]
     } ,
     right:{
         items: [
@@ -61,7 +61,7 @@ tt.setNavigationBar({
             // 显示文本
             {id: "right_two", text: "right_xxx"}
         ],
-    },    
+    },
     // 页面发生跳转后是否重置导航栏设置
     autoResetNavigationBar: true,
     // 右侧按钮数量大于1后是否对iOS端进行逆序
@@ -71,7 +71,7 @@ tt.setNavigationBar({
     },
     fail(err) {
         console.log(`${JSON.stringify(err)}`);
-    }                 
+    }
 
 });
 

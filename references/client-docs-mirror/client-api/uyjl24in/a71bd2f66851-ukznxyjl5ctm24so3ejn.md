@@ -79,7 +79,7 @@ tt.onBluetoothDeviceFound(function(res) {
     }
   ]
 }
-``` 
+```
 
 ## 错误码
 

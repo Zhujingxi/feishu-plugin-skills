@@ -32,7 +32,7 @@ tt.hideProfile({
   },
   complete (res) {
     console.log('hideProfile 调用结束', res.errMsg);
-  } 
+  }
 });
 ```
 

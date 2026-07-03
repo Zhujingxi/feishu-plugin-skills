@@ -83,10 +83,10 @@ Block({
 - Good Case: onActivate 内同步注册事件监听。
 	```javascript
 	Block({
-  		onActivate(activeState) {
-    	this.setData(activeState);  // 恢复数据
-    	tt.onThemeChange(() => {});
-  	},
+		onActivate(activeState) {
+	this.setData(activeState);  // 恢复数据
+	tt.onThemeChange(() => {});
+	},
 	});
 	```
 	- Bad Case: onActivate 内异步注册事件监听。

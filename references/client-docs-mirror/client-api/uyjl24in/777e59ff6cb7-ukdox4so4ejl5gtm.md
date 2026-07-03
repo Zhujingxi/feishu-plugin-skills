@@ -55,7 +55,7 @@ tt.getStorage({
     "data": "DemoName",
     "errMsg": "getStorage:ok"
 }
-``` 
+```
 
 ## 错误码
 

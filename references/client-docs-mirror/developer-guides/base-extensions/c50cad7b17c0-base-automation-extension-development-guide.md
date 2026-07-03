@@ -75,14 +75,14 @@ npm install @lark-opdev/cli@latest -g -f
 - 选择 **Yes**：
 
 - 如果没有 ISV 资质，将自动创建一个企业自建应用以及一个自动化插件。
-    	- 如果有 ISV 资质，则可以选择创建商店应用`Store Apps`，或者企业自建应用 `Custom Apps`。
+	- 如果有 ISV 资质，则可以选择创建商店应用`Store Apps`，或者企业自建应用 `Custom Apps`。
 
 ![32.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/140eefe0ac29cfd4ea04c33063b7ca33_5z2BlTnurV.png?height=396&lazyload=true&maxWidth=800&width=3270)
 
 4. 初始化项目。
 使用下面命令安装项目依赖：
     ```
-    cd ${app-dir}/${action-starter} 
+    cd ${app-dir}/${action-starter}
     npm install
     ```
 

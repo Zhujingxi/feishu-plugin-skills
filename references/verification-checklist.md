@@ -70,3 +70,13 @@ Use this file when reviewing an implementation based on the `feishu-plugin-devel
 - [ ] Minimal reproduction or test resource URL is recorded outside the skill if needed.
 - [ ] Known limitations and manual console steps are documented.
 - [ ] User-facing handoff avoids exposing secrets or raw PII.
+
+
+## 6. Skill repository maintenance
+
+- [ ] Main `SKILL.md` remains a self-contained operating guide; exhaustive official pages stay in `references/` rather than the main skill body.
+- [ ] Authored skill files remain English-only. Generated upstream documentation mirrors may preserve official source-language content under `references/client-docs-mirror/`.
+- [ ] Local mirror integrity passes: `python scripts/crawl_client_docs.py --validate`.
+- [ ] Generic skill packaging passes: `npx --yes skills add . --list` and `npx --yes skills use . --skill feishu-plugin-development --full-depth`.
+- [ ] Whitespace hygiene passes with `git diff --check`; if a future upstream mirror intentionally preserves raw whitespace, document that exception next to the generated-file policy.
+- [ ] No secrets, private keys, long-lived tokens, tenant/user identifiers, or raw PII were introduced into authored files or generated mirrors.

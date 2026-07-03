@@ -50,7 +50,7 @@ tt.disconnectBLEDevice({
 {
   "errMsg": "connectBLEDevice:ok"
 }
-``` 
+```
 
 ## 错误码
 

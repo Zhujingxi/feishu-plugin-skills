@@ -39,7 +39,7 @@ id<KANativeAppOpenApiDelegate> open_api = api.nativeAppOpenApi;
 
 ### **property nativeAppOpenApi**
 
-客户端 OpenAPI 能力接口实例 
+客户端 OpenAPI 能力接口实例
 ```cpp
 id< KANativeAppOpenApiDelegate > _Nullable nativeAppOpenApi;
 ```
@@ -48,7 +48,7 @@ id< KANativeAppOpenApiDelegate > _Nullable nativeAppOpenApi;
 
 ## NativeAppOpenApiModel
 
-NativeApp调OpenAPI的结果 
+NativeApp调OpenAPI的结果
 `#include <interface_LKNativeAppOpenApiExternal-Swift.h>`
 
 Inherits from NSObject
@@ -68,7 +68,7 @@ Inherits from NSObject
 
 ### **function initWithResultType:data:**
 
-调用结果构造函数 
+调用结果构造函数
 
 ```cpp
 virtual nonnull instancetype initWithResultType:data:(
@@ -77,10 +77,10 @@ virtual nonnull instancetype initWithResultType:data:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **resultType** 调用结果类型
-  * **data** 调用结果内容 
+  * **data** 调用结果内容
 
 ### **function SWIFT_UNAVAILABLE**
 
@@ -96,14 +96,14 @@ static virtual "-init is unavailable" SWIFT_UNAVAILABLE_MSG()
 
 ### **property resultType**
 
-调用结果类型 
+调用结果类型
 ```cpp
 enum NativeAppApiResultType resultType;
 ```
 
 ### **property data**
 
-调用结果内容 
+调用结果内容
 ```cpp
 NSDictionary *_Nullable data;
 ```
@@ -126,9 +126,9 @@ More...
 protocol KANativeAppOpenApiDelegate-p;
 ```
 
-客户端 OpenAPI 能力组件接口协议，用于调用飞书开放平台接口 
+客户端 OpenAPI 能力组件接口协议，用于调用飞书开放平台接口
 
-* 目前已支持客户端调用的 API List  
+* 目前已支持客户端调用的 API List
 
 | API | 文档 |
 | ---- | ----------- |
@@ -143,7 +143,7 @@ protocol KANativeAppOpenApiDelegate-p;
 
 ### **function invokeOpenApiWithAppID:apiName:params:callback:**
 
-调用OpenAPI 
+调用OpenAPI
 
 ```cpp
 virtual void invokeOpenApiWithAppID:apiName:params:callback:(
@@ -154,12 +154,12 @@ virtual void invokeOpenApiWithAppID:apiName:params:callback:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **appID** NativeApp的appID
   * **apiName** 要调用的api的名字
   * **params** 参数
   * **vc** 调用API的vc
-  * **callback** 执行API后相关的逻辑 
+  * **callback** 执行API后相关的逻辑
 
 -------------------------------

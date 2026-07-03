@@ -32,7 +32,7 @@ const table = await bitable.base.getTableById(selection.tableId);
 const recordIds = await table.getRecordIdList(); // 随机获数据表所有行id
 const fields = await table.getFieldList();// 获取数据表字段列表
 
-const res = await table.getCellString(fields[0].id,recordIds[0]); 
+const res = await table.getCellString(fields[0].id,recordIds[0]);
 console.log(res)
 
 ```

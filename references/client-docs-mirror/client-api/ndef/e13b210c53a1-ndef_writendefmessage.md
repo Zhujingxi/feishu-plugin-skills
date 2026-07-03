@@ -30,7 +30,7 @@ records | object[] | 否 | &nbsp; | NdefRecord类型数组
 &emsp;<br>∟<br>&nbsp;<br>type | arraybuffer | 否 | &nbsp; | NdefRecord的type值。示例值：new Uint8Array([0x30, 0x03]).buffer
 &emsp;<br>∟<br>&nbsp;<br>payload | arraybuffer | 否 | &nbsp; | NdefRecord的payload值。示例值：new Uint8Array([0x30, 0x03]).buffer
 
-**注意事项**：**注意**：当传入的数据在处理过程中发生异常时，异常数据会被过滤，不影响其他正常数据的写入 
+**注意事项**：**注意**：当传入的数据在处理过程中发生异常时，异常数据会被过滤，不影响其他正常数据的写入
 
 ## 输出
 继承[标准对象输出](https://open.feishu.cn/document/uYjL24iN/ukzNy4SO3IjL5cjM#8c92acb8)，无扩展属性

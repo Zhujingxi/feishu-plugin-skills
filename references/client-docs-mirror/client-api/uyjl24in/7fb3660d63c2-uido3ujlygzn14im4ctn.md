@@ -31,7 +31,7 @@ callback | function | 是 | &nbsp; | 该事件的回调函数
 const callback = function (res) {
   const size = res.size;
   const windowWidth = size.windowWidth;
-  const windowHeight = size.windowHeight; 
+  const windowHeight = size.windowHeight;
   console.log(JSON.stringify(size))
 };
 

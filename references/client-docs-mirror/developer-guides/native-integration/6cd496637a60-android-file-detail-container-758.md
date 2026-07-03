@@ -56,7 +56,7 @@ interface IFileDetailPlugin {
     int getPriority(); // 应用实现的优先级，第三方SDK的优先级一般为 TYPE_HIGH
     boolean canPreview(String fileExtension); // 通过文件后缀判断能否预览文件
     Fragment getLocalPreviewFragment(Context context, String fileName, String filePath); // 获取用于预览文件的 Fragment
-    void checkAndInit(); 
+    void checkAndInit();
 }
 ```
 

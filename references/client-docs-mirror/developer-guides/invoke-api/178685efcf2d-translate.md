@@ -22,11 +22,11 @@ myComponent.invoke('TOGGLE_TRANSLATE', true, 'en').then(function(response) {
 
 ## 参数
 |属性|	类型|	是否必须	|说明|
-| ---|----- | -------|------ | 
+| ---|----- | -------|------ |
 |language|	String	|否|	翻译语言（传空为退出翻译）
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |

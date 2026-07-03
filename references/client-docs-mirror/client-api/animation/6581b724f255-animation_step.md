@@ -25,7 +25,7 @@ transformOrigin | string | 否 | 50% 50% 0 | 元素变形的原点
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

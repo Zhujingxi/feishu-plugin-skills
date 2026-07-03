@@ -201,8 +201,8 @@ function requestUserAccessToken(code, complete) {
 // 获取user_access_token信息
     console.log("接入方前端[免登处理]第② 步: 去接入方服务端获取user_access_token信息")
     axios.get(`${getOrigin(clientConfig.apiPort)}${clientConfig.getUserAccessTokenPath}?code=${code}`,
-        { withCredentials: true }   
-    ).then(function (response) {  
+        { withCredentials: true }
+    ).then(function (response) {
         if (!response.data) {
             console.error(`${clientConfig.getUsee} response is null`)
             complete()

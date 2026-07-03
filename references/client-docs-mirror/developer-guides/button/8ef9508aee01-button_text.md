@@ -54,7 +54,7 @@ td {
 ---|---
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/f280964f6dabb16bf6ea6801799276a3_3hYp5rFRao.png?height=20&lazyload=true&width=800)<br>**正确：** <br>以 Button_Text 容器边框（hover 态）左对齐。（视觉影响不甚微，且研设实现成本更低） | ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/5d576ae0cad45457a2c92e8b32194543_EWbyDet7Zc.png?height=20&lazyload=true&width=800)<br>**避免：** <br>以默认态的视觉对齐（会增加研设实现成本，并且交互态对齐会显得更为突兀）
 
-<br>  
+<br>
 **特殊场景** : 当文字按钮与多条 Item 文字组合形成类似列表的形式（尤其是文字按钮作为 List 列表中的一项，且上下均有紧密内容时），务必通过使按钮文本标签与 List 内容对齐，优先确保默认状态下的视觉对齐。
 
 ![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/4f1bcf4ea2affeb51d9c294bff851c1c_ZB6KLg7PLS.png?height=1200&lazyload=true&width=2560)<br>特殊场景

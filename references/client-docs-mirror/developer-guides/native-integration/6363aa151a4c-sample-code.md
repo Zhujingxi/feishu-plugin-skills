@@ -79,12 +79,12 @@ public class CustomNativeApp implements INativeAppExtension, INativeAppLauncher 
 
 1. 自定义登录页面，其中包含完整的登录流程控制
 
-```javascript 
+```javascript
 import UIKit
 class MyPassportNavigationViewController: UINavigationController {
     init() {
-        let rootVC = PassportViewController()         
-        super.init(rootViewController: rootVC)     
+        let rootVC = PassportViewController()
+        super.init(rootViewController: rootVC)
     }
 }
 class MyPassportViewController {
@@ -97,7 +97,7 @@ override func viewDidLoad() {
         view.addSubView(loginButton)
         view.addSubView(userNameField)
         view.addSubView(passwordField)
-        /* set style */        
+        /* set style */
 
 loginButton.addTarget(self, action: #selector(onLoginButtonClicked), for: .touchUpInside)
     }
@@ -110,7 +110,7 @@ extension MyPassportViewController {
 ```
 
 2.  实现原生集成应用组件协议，打开飞书 App 时跳转到自定义的登录页 `MyPassportNavigationViewController`。其中`app_id`需要联系技术顾问获取。
-```javascript 
+```javascript
 import Foundation
 import LKNativeAppExtensionExternal
 @objc
@@ -131,7 +131,7 @@ public func pageRoute(_ link: URL!, from: UIViewController!) {
 3. 在 Object-C(.m) 文件代码中注册`MyPassportPageRoute`
 
 方式一：直接在 OC 代码中注册
-```javascript 
+```javascript
 @import LKKABridge; // 引入 KAAPI_REGISTER 宏
 @import LKNativeAppExtensionExternal;
 #import <LKNativeAppExtensionExternalIMP/LKNativeAppExtensionExternalIMP-Swift.h> // 引入自定义的实现 MyNativeApp
@@ -149,7 +149,7 @@ public func pageRoute(_ link: URL!, from: UIViewController!) {
 ```
 方式二：在 OC 中调用 swift 代码注册
 - .swift 文件
-```javascript 
+```javascript
 @objcMembers
 public class MyNativeAppLoader: NSObject {
     // 注册方法
@@ -160,7 +160,7 @@ public class MyNativeAppLoader: NSObject {
 }
 ```
 - .m 文件
-```javascript 
+```javascript
 @import LKNativeAppExtensionExternal;
 #import "ka_auto_generated.h" // 引入 getChannel() 方法
 // 引入 MyNativeAppLoader 所在的.swift文件
@@ -179,7 +179,7 @@ public class MyNativeAppLoader: NSObject {
 
 1. 参考[原生集成应用身份申请指南](https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/native-integration/open-scene-introduction/protocol-components/native-integrated-application/nati) 申请应用，获取 app_id，如 cli_abcde1234567890
 2.  实现`OpenNativeAppProtocol`协议
-```javascript 
+```javascript
 // LKNativeAppExtensionExternalIMP.swift
 import LKNativeAppExtensionExternal
 import Foundation
@@ -199,14 +199,14 @@ public class MyNativeApp: NSObject, OpenNativeAppProtocol {
 // 返回开放平台中获取的应用 app_id
     public func getNativeAppId() -> String {
         return "cli_abcde1234567890"
-    } 
+    }
     static let shared: MyNativeApp = MyNativeApp()
 }
 ```
 3. 在 Object-C(.m) 文件代码中注册`MyNativeApp`
 
 方式一：直接在 OC 代码中注册
-```javascript 
+```javascript
 @import LKKABridge; // 引入 KAAPI_REGISTER 宏
 @import LKNativeAppExtensionExternal;
 #import <LKNativeAppExtensionExternalIMP/LKNativeAppExtensionExternalIMP-Swift.h> //引入自定义的实现 MyNativeApp
@@ -224,7 +224,7 @@ public class MyNativeApp: NSObject, OpenNativeAppProtocol {
 ```
 方式二：在 OC 中调用 swift 代码注册
 - .swift 文件
-```javascript 
+```javascript
 import LKKABridge
 import LKNativeAppExtensionExternal
 @objcMembers
@@ -237,7 +237,7 @@ public class MyNativeAppLoader: NSObject {
 }
 ```
 - .m 文件
-```javascript 
+```javascript
 #import "ka_auto_generated.h" // 引入 getChannel() 方法
 // 引入 MyNativeAppLoader 所在的.swift文件
 #import <LKNativeAppExtensionExternalIMP/LKNativeAppExtensionExternalIMP-Swift.h>

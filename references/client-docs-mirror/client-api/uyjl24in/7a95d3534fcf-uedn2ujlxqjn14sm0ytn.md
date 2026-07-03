@@ -78,6 +78,6 @@ tt.getChatInfo(
   "name": "飞书会议",
   "errMsg": "getChatInfo:ok"
 }
-``` 
+```
 
 *(关键词：chatid, chat_id, chat id, 群id)*

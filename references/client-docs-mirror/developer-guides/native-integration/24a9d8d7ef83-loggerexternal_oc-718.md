@@ -42,7 +42,7 @@ id<KALoggerProtocol> logger = api.logger;
 
 ### **property logger**
 
-Logger 能力接口实例 
+Logger 能力接口实例
 ```cpp
 id< KALoggerProtocol > _Nullable logger;
 ```
@@ -51,7 +51,7 @@ id< KALoggerProtocol > _Nullable logger;
 
 ## KALoggerProtocol
 
-Logger 协议，用于打印日志 
+Logger 协议，用于打印日志
 `#include <interface_LKLoggerExternal-Swift.h>`
 
 |        类型     | 定义名称           |
@@ -64,7 +64,7 @@ Logger 协议，用于打印日志
 
 ### **function verboseWithTag:tag:**
 
-输出更多 debug 的信息 
+输出更多 debug 的信息
 
 ```cpp
 virtual void verboseWithTag:tag:(
@@ -73,14 +73,14 @@ virtual void verboseWithTag:tag:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **tag** tag name
-  * **msg** verbose information 
+  * **msg** verbose information
 
 ### **function debugWithTag:tag:**
 
-只在 debug 下输出信息 
+只在 debug 下输出信息
 
 ```cpp
 virtual void debugWithTag:tag:(
@@ -89,14 +89,14 @@ virtual void debugWithTag:tag:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **tag** tag name
-  * **msg** debug information 
+  * **msg** debug information
 
 ### **function infoWithTag:tag:**
 
-输出普通信息 
+输出普通信息
 
 ```cpp
 virtual void infoWithTag:tag:(
@@ -105,14 +105,14 @@ virtual void infoWithTag:tag:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **tag** tag name
-  * **msg** info information 
+  * **msg** info information
 
 ### **function warningWithTag:tag:**
 
-输出警告信息 
+输出警告信息
 
 ```cpp
 virtual void warningWithTag:tag:(
@@ -121,14 +121,14 @@ virtual void warningWithTag:tag:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **tag** tag name
-  * **msg** warning information 
+  * **msg** warning information
 
 ### **function errorWithTag:tag:**
 
-输出错误信息 
+输出错误信息
 
 ```cpp
 virtual void errorWithTag:tag:(
@@ -137,9 +137,9 @@ virtual void errorWithTag:tag:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **tag** tag name
-  * **msg** error information 
+  * **msg** error information
 
 -------------------------------

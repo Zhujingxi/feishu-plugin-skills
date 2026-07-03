@@ -76,7 +76,7 @@ Python 版本不同，命令也不同：
 
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/57a5eaf0017d148e4227b96def376110_m5zSBQ13y4.png?height=1174&lazyload=true&maxWidth=600&width=1686)
 
-5. 添加后，妥善保管机器人 webhook 地址，并点击 **完成**。    
+5. 添加后，妥善保管机器人 webhook 地址，并点击 **完成**。
 后续需要向机器人的 webhook 地址发送请求，以发送消息卡片，因此你需要保存该 webhook，并确保数据安全，避免机器人被他人恶意调用。
 
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/bfaaf7316f9a5a43db7554da58eb6b8f_g4L2H75YdJ.png?height=1136&lazyload=true&maxWidth=600&width=1664)

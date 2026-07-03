@@ -84,7 +84,7 @@ tt.downloadFile({
     "statusCode": 200,
     "errMsg": "downloadFile:ok"
 }
-``` 
+```
 
 `fail`返回对象示例：
 ```json

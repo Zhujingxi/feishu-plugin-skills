@@ -36,7 +36,7 @@ limitSize | number | 存储空间上限。单位：KB
 调用示例：
 
 ```js
-tt.getStorageInfo({ 
+tt.getStorageInfo({
     success(res) {
       console.log(JSON.stringify(res));
     },

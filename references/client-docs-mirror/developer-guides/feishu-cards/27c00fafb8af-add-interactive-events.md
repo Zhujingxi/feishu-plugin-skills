@@ -70,11 +70,11 @@ https://applink.feishu.cn/client/web_url/open?mode=sidebar-semi&max_width=800&re
     - 可更新的的有效期为 14 天。如果用户在卡片发出后第 14-30 天交互卡片且交互回调动作为更新卡片，那么更新动作将不会生效。
 - 对于[新版卡片](https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/feishu-card-cardkit/cardkit-upgraded-version-card-release-notes)，卡片请求回调交互和可更新时间统一为 14 天。
 
-### 示例效果     
+### 示例效果
 
 如下图，[卡片交互机器人教程](https://open.feishu.cn/document/uAjLw4CM/uMzNwEjLzcDMx4yM3ATM/develop-a-card-interactive-bot/introduction)中的告警卡片中，**处理完成** 按钮配置了请求回调交事件，当用户点击 **处理完成** 按钮时，飞书会向你的服务端发送包含以下回传参数的回调。你需要在服务端内，接收该请求并根据请求数据做业务处理，及时对用户行为做作出响应。基于该教程的响应处理可参考[示例代码解释](https://open.feishu.cn/document/uAjLw4CM/uMzNwEjLzcDMx4yM3ATM/develop-a-card-interactive-bot/explanation-of-example-code)。
 
-![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/67326d507b38fd9cebf37313e66ab990_VNR5Vl1Iqz.gif?height=952&lazyload=true&maxWidth=400&width=1556) 
+![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/67326d507b38fd9cebf37313e66ab990_VNR5Vl1Iqz.gif?height=952&lazyload=true&maxWidth=400&width=1556)
 
 ### 配置示例
 

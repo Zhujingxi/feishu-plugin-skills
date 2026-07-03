@@ -90,7 +90,7 @@ Page({
 
 更多组件相关的内容可参考 [小程序的组件](https://open.feishu.cn/document/uYjL24iN/ugTNugTNugTN)。
 
-## API 
+## API
 
 为了让你很方便的使用飞书提供的能力，例如，获取用户信息、获取设备当前的地理位置、播放视频等，小程序提供了丰富的 API 供你使用，这些 API 分为异步、同步两种。
 
@@ -103,26 +103,26 @@ API 示例代码如下：
 - 获取用户信息
 
 ```javascript
-tt.getUserInfo({ 
-    success (res) { 
-        console.log(`getUserInfo 调用成功 ${res.userInfo}`); 
-    }, 
-    fail (res) { 
-        console.log(`getUserInfo 调用失败`); 
-    } 
+tt.getUserInfo({
+    success (res) {
+        console.log(`getUserInfo 调用成功 ${res.userInfo}`);
+    },
+    fail (res) {
+        console.log(`getUserInfo 调用失败`);
+    }
 });
 ```
 
 - 获取设备当前的地理位置
 
 ```javascript
-tt.getLocation({ 
-    success (res) { 
-        console.log(`经度 ${res.longitude}，纬度 ${res.latitude}`); 
-    }, 
-    fail (res) { 
-        console.log(`getLocation 调用失败`); 
-    } 
+tt.getLocation({
+    success (res) {
+        console.log(`经度 ${res.longitude}，纬度 ${res.latitude}`);
+    },
+    fail (res) {
+        console.log(`getLocation 调用失败`);
+    }
 });
 ```
 - 多数 API 都是基于异步回调，所以你需要处理好异步逻辑，传入正确的回调函数去处理业务。

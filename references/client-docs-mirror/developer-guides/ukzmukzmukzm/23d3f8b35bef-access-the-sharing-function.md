@@ -105,7 +105,7 @@ function getH5Info() {
     var desc = getOGPInfo('description') || getTwitterInfo('description') || getMetaDesc() || window.location.href;
     var iconUrl = getOGPInfo('image') || getTwitterInfo('image') || "";
     return {iconUrl: iconUrl, title: title.replace(/[\r\n\t]/g, ""), desc: desc.replace(/\r\n/g, "")}
-} 
+}
 ```
 以上优先级的支持版本为飞书 v5.23 及更高。在飞书 v5.23 之前的版本，网页内容获取的优先级说明如下（以下优先级由高到低，降序排列）：
 

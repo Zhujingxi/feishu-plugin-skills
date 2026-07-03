@@ -50,7 +50,7 @@ const newData = await DocMiniApp.Interaction.setData(
     {
       type: 'replace',
       data: {
-        path: [], 
+        path: [],
         value: { a:2 }
       }
     }

@@ -40,7 +40,7 @@ authSetting | object | 展示用户已设置（包括授予和拒绝）的权限
 调用示例：
 
 ```js
-tt.getSetting({ 
+tt.getSetting({
     success(res) {
       console.log(JSON.stringify(res));
     },

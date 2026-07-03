@@ -32,7 +32,7 @@ hideToast(Object object) 用于隐藏灰色背景的消息提示框。
 调用示例：
 
 ```js
-tt.hideToast({ 
+tt.hideToast({
     success(res) {
       console.log(JSON.stringify(res));
     },
@@ -48,7 +48,7 @@ tt.hideToast({
 {
   errMsg: "hideToast:ok"
 }
-``` 
+```
 
 ## 错误码
 

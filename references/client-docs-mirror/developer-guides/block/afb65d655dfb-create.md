@@ -26,7 +26,7 @@ Block 创建的本质是开发者使用`Creator`在平台上创建一个`BlockEn
 宿主使用`Creator`创建一个`BlockEntity`，并保存`BlockEntity.BlockID`，实现在页面某个位置插入一个`Block`。当其他人或者再次打开宿主该页面，宿主会通过`BlockID`完成该区域 Block 渲染。
 创建完 BlockEntity 后，只能修改 `BlockEntity.sourceData`。
 
-## 创建 BlockEntity 
+## 创建 BlockEntity
 
 宿主在创建 Block 的过程中（如：云文档加号菜单中发起创建），会先加载开发者提供的 `Creator`。开发者在`Creator`中调用 `tt.setBlockInfo`  返回给宿主一个`BlockEntity`（可以是新建的也可以是已存的）。
 
@@ -52,7 +52,7 @@ Block 创建的本质是开发者使用`Creator`在平台上创建一个`BlockEn
 
 #### 示例代码
 
-```javascript 
+```javascript
  Creator({
    onLoad() {
      const sourceData = { point: 1 }; // 业务数据
@@ -74,7 +74,7 @@ Block 创建的本质是开发者使用`Creator`在平台上创建一个`BlockEn
        }
      });
    },
- }); 
+ });
 ```
 
 ### 开发者服务端创建（不推荐）
@@ -94,7 +94,7 @@ Block 创建的本质是开发者使用`Creator`在平台上创建一个`BlockEn
 ![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/c9e4b4cdc3a4584467c837f72d31ee1f_XhfktYIa2w.png?height=770&lazyload=true&width=1914)
 #### 示例代码
 
-```javascript 
+```javascript
 Creator({
   onLoad() {
     const sourceData = { point: 1 };  // 业务数据
@@ -102,7 +102,7 @@ Creator({
       url: 'https://[ServerDomain]/api/create',  // 开发者服务端接口地址
       method: 'POST',
       data: {
-        sourceData,  
+        sourceData,
       },
       success(response) {
         // 开发者服务端返回 blockID
@@ -112,8 +112,8 @@ Creator({
       }
     });
   },
-}); 
-``` 
+});
+```
 
 #### 服务端接口
 

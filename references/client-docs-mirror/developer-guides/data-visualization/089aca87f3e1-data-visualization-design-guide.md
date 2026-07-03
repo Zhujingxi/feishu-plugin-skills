@@ -32,7 +32,7 @@ td {
 以下为 DS 默认分类色板：<br>![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/09c5da851ff483368f32aba7e124ccfd_Yez1PVJ2Ue.png?height=600&lazyload=true&width=2560)
 ---
 
-**取色示例：** 
+**取色示例：**
 
 只有一个类别：<br>取分类色板第一个颜色应用到每个数据上。 | 显示多个类别：<br>按照预定顺序自动从分类色板取色应用到每个类别中
 ---|---
@@ -65,7 +65,7 @@ function 色板 | 使用场景
 ---|---
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/436bc5dda1839d303a8136b18322998b_OuqSJjjk08.png?height=2178&lazyload=true&width=1912) | 元素：<br>![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b191070588b60ad8bf7288441fb110c8_UgUyvYQYnT.png?height=792&lazyload=true&maxWidth=260&width=1266)&nbsp;&nbsp;![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/1f9347580284b3de8c7f9b418b1bf30f_iKJDWBCy1R.png?height=792&lazyload=true&maxWidth=260&width=1266)<br>文字：（请重视颜色在不同文化中可能具有不同的含义，仅作示例）<br>![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/36d081b9baf3f6bce091ff9069ff10ed_YHbkzFzJMu.png?height=711&lazyload=true&maxWidth=260&width=1280)&nbsp;&nbsp;![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/561b94b7d93e36331557da7d8d01add7_c4YmbAaaOj.png?height=711&lazyload=true&maxWidth=260&width=1280)
 
-<br>  
+<br>
 
 ## 图表构成
 
@@ -88,7 +88,7 @@ function 色板 | 使用场景
 - **图例纹理：** 默认情况下使用颜色区分数据属性，（色盲、色弱等）视障场景下可以通过纹理代替/补充颜色区分
 - **图例过多：** 当前 Vchart 预置方式体验一般，优先以业务内探索统一方案后 UD 跟进研发
 
-<br> 
+<br>
 
 ## 高频图表的选择&应用
 
@@ -323,7 +323,7 @@ X 轴、Y 轴都对应数据
 ![](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/a80fc4d556399634ad6ade10339f70be_uEPRi2KOXt.png?height=1250&lazyload=true&width=2560)
  横轴抽样、纵轴转化（基于数据场景选择合适的轴线、标签个数，不要影响用户阅读数据）
 
-<br> 
+<br>
 旋转场景易出现标签高度超过图表容器空间的场景，信息展示不合理。所以我们建议旋转场景下，高度超出图表容器空间 30% 时开始自动省略。
 <br>
 

@@ -39,7 +39,7 @@ state | number | 打开蓝牙返回的状态值。可能值：<br>- `0`：未知
 调用示例：
 
 ```js
-tt.openBluetoothAdapter({ 
+tt.openBluetoothAdapter({
     success(res) {
       console.log(JSON.stringify(res));
     },

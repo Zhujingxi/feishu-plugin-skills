@@ -15,14 +15,14 @@ myComponent.invoke.getCurrentAuth().then(function(response) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |
 |data|Object|用户权限|
 
 ### data
 |属性|	类型|	说明|
-| ---|----- | ------ | 
+| ---|----- | ------ |
 |owner|	Boolean|	是否为文档所有者
 |readable|	Boolean|	是否有文档阅读权限
 |editable|	Boolean|	是否有文档编辑权限

@@ -15,7 +15,7 @@ myComponent.invoke.getSupportedExportFormats().then(function(response) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |code|	Number |	0：成功 、 -1：失败 |
 |msg|	String |	信息 |
 |data|Array|支持导出格式列表|

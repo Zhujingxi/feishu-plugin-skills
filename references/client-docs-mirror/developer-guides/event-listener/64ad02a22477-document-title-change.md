@@ -20,5 +20,5 @@ myComponent.register('SUITE_TITLE_CHANGE', function(title) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |title|	String |文档标题|

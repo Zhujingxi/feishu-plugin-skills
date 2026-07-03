@@ -29,6 +29,6 @@ myComponent.register('ON_CREATE_TEMP_COMMENT', function(eventData) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |quote|String |对应正文的划线内容
 |tmpCommentId|String |临时评论的唯一标识符，用于关联评论内容。

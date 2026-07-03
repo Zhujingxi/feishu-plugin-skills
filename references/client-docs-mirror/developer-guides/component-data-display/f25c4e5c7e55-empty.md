@@ -71,7 +71,7 @@ padding: 0px;
 
 当搜索、筛选等结果为空、权限不够、未选中列表中的项、详情为空(或没有预览)等，可使用中性反馈。空的页面对于用户来说过于冷漠及不友好，可用中性反馈插画**引导用户**或者**说明状况**。
 
-![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b5f08bf5a930624aac47d5a7165ca57c_hmV7ynJdJM.png?lazyload=true&width=1280&height=778)  
+![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/b5f08bf5a930624aac47d5a7165ca57c_hmV7ynJdJM.png?lazyload=true&width=1280&height=778)
 
 #### 正反馈反馈使用场景
 
@@ -83,9 +83,9 @@ padding: 0px;
 
 ![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/784dcbe6b03a34e4fd3fd1e4d3eb1739_lcxmAx7CsU.png?lazyload=true&width=1280&height=778)
 
-- 引导用户进行下一步操作。一般是启用或开通新功能 
+- 引导用户进行下一步操作。一般是启用或开通新功能
 
-![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/21ff01e5bfbff57f84841725d1484442_bQ86GDNOtN.png?lazyload=true&width=1280&height=778)  
+![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/21ff01e5bfbff57f84841725d1484442_bQ86GDNOtN.png?lazyload=true&width=1280&height=778)
 
 - 用于页面以及模块容器中的加载状态，即时告知用户他的请求正在处理中。
 
@@ -165,7 +165,7 @@ padding: 0px;
 1. **文案说明 （必选）** 精简概要，短语、断句表达功能
 1. **按钮（可选）** 行动按钮，用于引导用户操作或帮助解决问题
 
-![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/a5e045971d8c4d5b08aaec67213b860a_U4J8s69owB.png?lazyload=true&width=8000&height=3600)  
+![image.png](//sf3-cn.feishucdn.com/obj/open-platform-opendoc/a5e045971d8c4d5b08aaec67213b860a_U4J8s69owB.png?lazyload=true&width=8000&height=3600)
 
 #### 场景示例
 

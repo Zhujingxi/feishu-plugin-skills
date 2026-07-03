@@ -20,5 +20,5 @@ myComponent.register('FULL_SCREEN_MODE', function(isFullScreen) {
 
 ## 返回
 |属性|	类型|	说明|
-| ---|----- | ------- | 
+| ---|----- | ------- |
 |isFullScreen|	Boolean |是否全屏|

@@ -27,8 +27,8 @@ param 继承自[标准对象输入](https://open.feishu.cn/document/uAjLw4CM/uYj
 ### 代码示例
 ```json
 {
-  	"tab": "api",
-  	"item": "removeMenuItem"
+	"tab": "api",
+	"item": "removeMenuItem"
   }
 ```
 

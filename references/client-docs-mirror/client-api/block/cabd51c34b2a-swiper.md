@@ -50,25 +50,25 @@ bindchange | (e: ChangeEvent) => void | 否 | \- | current 改变时会触发 ch
 <md-block>
   <md-block-entity>
 {
-    "blockID": "mock-blockID", 
-	"blockTypeID": "blk_610a0f3659c04004c56b2b90", 
+    "blockID": "mock-blockID",
+	"blockTypeID": "blk_610a0f3659c04004c56b2b90",
     "sourceMeta": {
 
-}, 
+},
     "sourceData": {
-    	"tab": "component",
-    	"item": "swiper",
-    	"isNew": true
+	"tab": "component",
+	"item": "swiper",
+	"isNew": true
     }
 }
 </md-block-entity>
    <md-block-appLink>
 {
-    "openDetail": 1, 
-    "title": "swiper", 
-    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22getSystemInfo%22%7D", 
+    "openDetail": 1,
+    "title": "swiper",
+    "list_page_url": "https://applink.feishu.cn/client/block/workplace/open?appId=cli_a00834ec56f8d01b%26blockTypeId=blk_610a40455f800004c32b6bb6%26sourceData=%7B%22tab%22%3A%22component%22%2C%22item%22%3A%22getSystemInfo%22%7D",
     "min_lk_ver": {
-        "pc": "5.10.0", 
+        "pc": "5.10.0",
         "mobile": "5.11.0"
     },
     "blockEntity": {
@@ -77,7 +77,7 @@ bindchange | (e: ChangeEvent) => void | 否 | \- | current 改变时会触发 ch
             "item": "swiper",
             "isNew": true
         },
-  		"blockID": "mock-block"
+		"blockID": "mock-block"
     }
 }
 </md-block-appLink>
@@ -320,18 +320,18 @@ bindchange | (e: ChangeEvent) => void | 否 | \- | current 改变时会触发 ch
 }
 
 .property-container {
-  margin-top: 24px; 
-  padding-left: 16px; 
-  box-sizing: border-box; 
-  border-top: 0.5px solid rgba(31, 35, 41, 0.15); 
-  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15); 
-  display: flex; 
+  margin-top: 24px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  border-top: 0.5px solid rgba(31, 35, 41, 0.15);
+  border-bottom: 0.5px solid rgba(31, 35, 41, 0.15);
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .property-container-bg {
-  background: white; 
+  background: white;
 }
 
 .m-picker-choose {
@@ -413,11 +413,11 @@ bindchange | (e: ChangeEvent) => void | 否 | \- | current 改变时会触发 ch
 }
 
 .line-container {
-  width: 100%; 
-  display: flex; 
-  justify-content: space-between; 
-  padding: 5px 16px 5px 0px; 
-  box-sizing: border-box; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 16px 5px 0px;
+  box-sizing: border-box;
   border-top: 0.5px solid rgba(31, 35, 41, 0.15);
 }
 
@@ -436,9 +436,9 @@ bindchange | (e: ChangeEvent) => void | 否 | \- | current 改变时会触发 ch
 }
 
 .time-number {
-  border-left: 1px solid #BBBFC4; 
-  border-right: 1px solid #BBBFC4; 
-  font-size: 14px; 
+  border-left: 1px solid #BBBFC4;
+  border-right: 1px solid #BBBFC4;
+  font-size: 14px;
   line-height: 22px;
   text-align: center;
   box-sizing: content-box;
@@ -548,18 +548,18 @@ Block({
       title: 'swiper_auto'
     }],
     numberInputOptions: [{
-      key: 'interval', 
-      label: 'swiper_slides_advancs_interval', 
-      min: 500, 
-      max: 2000, 
-      step: 100, 
+      key: 'interval',
+      label: 'swiper_slides_advancs_interval',
+      min: 500,
+      max: 2000,
+      step: 100,
       value: 500,
       upDisabled: false,
       downDisabled: true,
       handler: 'numberChange'
     }, {
-      key: 'duration', 
-      label: 'swiper_autp_slide_interval', 
+      key: 'duration',
+      label: 'swiper_autp_slide_interval',
       min: 2000,
       max: 10000,
       step: 500,
@@ -603,7 +603,7 @@ this.setData({
 if ((type === 'up' && currentValue > max) || (type === 'down' && currentValue < min)) {
         return;
       }
-      const { commonData } = this.data; 
+      const { commonData } = this.data;
       commonData.numberInputOptions[index].value = currentValue;
       commonData.numberInputOptions[index].upDisabled = upDisabled;
       commonData.numberInputOptions[index].downDisabled = downDisabled;

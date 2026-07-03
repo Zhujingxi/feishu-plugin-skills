@@ -62,7 +62,7 @@ tt.writeBLECharacteristicValue({
 {
 	"errMsg": "writeBLECharacteristicValue:ok"
 }
-``` 
+```
 
 `fail`返回对象示例：
 ```json

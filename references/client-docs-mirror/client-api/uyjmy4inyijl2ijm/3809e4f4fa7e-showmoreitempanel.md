@@ -75,7 +75,7 @@ tt.showMoreItemPanel({
     },
     fail(err) {
         console.log(`${JSON.stringify(err)}`);
-    }                    
+    }
 });
 ```
 `success`返回对象示例：

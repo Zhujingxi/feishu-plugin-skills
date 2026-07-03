@@ -31,7 +31,7 @@ hideLoading(Object object) 用于隐藏 loading 提示框。
 调用示例：
 
 ```js
-tt.hideLoading({ 
+tt.hideLoading({
     success(res) {
       console.log(JSON.stringify(res));
     },
@@ -47,7 +47,7 @@ tt.hideLoading({
 {
     "errMsg": "hideLoading:ok"
 }
-``` 
+```
 
 ## 错误码
 

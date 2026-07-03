@@ -29,7 +29,7 @@ val service = spi.getGlobalService(YourInterface::class.java)
 
 ## INTERFACE
 ### ILoader
-获取实例的接口  
+获取实例的接口
 **建议使用注解的方式来注册，而不是手动使用 API 注册**
 
 ```kotlin
@@ -58,7 +58,7 @@ interface ISpiApi {
 
 #### 方法列表
 #### `fun <T : Any> registerLoader(c: Class<T>, loader: ILoader<T>)`
-注册接口的实现类  
+注册接口的实现类
 **建议使用注解的方式来注册，而不是手动使用 API 注册**
 
 | 参数名称 | 类型 | 必填 | 描述 |

@@ -73,7 +73,7 @@ Page({
 ```
 
 ## API
-`<web-view />` 网页中可使用 [JSSDK](https://lf1-cdn-tos.bytegoofy.com/goofy/ee/spm/lark/jssdk/webview/jssdk-1.0.4.js) 提供的接口返回小程序页面。支持的接口有 
+`<web-view />` 网页中可使用 [JSSDK](https://lf1-cdn-tos.bytegoofy.com/goofy/ee/spm/lark/jssdk/webview/jssdk-1.0.4.js) 提供的接口返回小程序页面。支持的接口有
 * web-view 组件的 sdk 与[网页应用 JSSDK](https://open.feishu.cn/document/uYjL24iN/uITO4IjLykDOy4iM5gjM)不同，因为[网页应用 JSSDK](https://open.feishu.cn/document/uYjL24iN/uITO4IjLykDOy4iM5gjM)是作用在网页容器上的，而web-view是小程序的一个UI组件，请注意不要误用。
 * PC 端暂不支持以下 API。
 

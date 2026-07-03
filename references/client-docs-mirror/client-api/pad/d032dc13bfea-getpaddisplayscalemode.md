@@ -30,7 +30,7 @@ displayScaleMode | string | 当前Pad上的显示状态，可能的取值包括d
 ## 示例代码
 
 ```js
-tt.getPadDisplayScaleMode({ 
+tt.getPadDisplayScaleMode({
     success(res) {
       console.log(JSON.stringify(res));
     },

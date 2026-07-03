@@ -55,7 +55,7 @@ Authorization | string | 是 | `app_access_token`<br>或<br>`user_access_token`<
   ```
 
 **返回参数说明**
-  | 参数        | 说明           | 
+  | 参数        | 说明           |
 | --------- | --------------- |
 |`code` | 返回码，非 0 表示失败 |
   |`msg` | 对返回码的文本描述 |
@@ -70,7 +70,7 @@ Authorization | string | 是 | `app_access_token`<br>或<br>`user_access_token`<
 jsapi_ticket=a885c93b03d6b6057e992ddda519e6ac857b5d6c&noncestr=Y7a8KkqX041bsSwT&timestamp=1609904126124&url=https://m.mm.cn/ttc/3541093/3131_1.html
 ```
 
-| 参数        | 示例           |  说明 
+| 参数        | 示例           |  说明
 | --------- | --------------- |--------------- |
 |noncestr | Y7a8KkqX041bsSwT |  一个随机字符串，由数字、字母组成|
 |jsapi_ticket|a885c93b03d6b6057e992ddda519e6ac857b5d6c|上一步通过 token 取得的 ticket|

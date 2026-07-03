@@ -52,7 +52,7 @@ tt.setBLEMTU({
 {
 	"errMsg": "setBLEMTU:ok"
 }
-``` 
+```
 
 ## 错误码
 `fail`返回对象中会包含[errorCode属性](https://open.feishu.cn/document/uYjL24iN/ukzNy4SO3IjL5cjM#a825f4c8)，代表错误码。

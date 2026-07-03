@@ -42,7 +42,7 @@ Tab 切换 | 调用 API [`tt.switchTab`](https://open.feishu.cn/document/uYjL24i
 * switchTab 只能打开 tabBar 页面。
 * reLaunch 可以打开任意页面。
 * 页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
-* 调用页面路由带的参数可以在目标页面的 onLoad 中获取。 
+* 调用页面路由带的参数可以在目标页面的 onLoad 中获取。
 
 **Tab 切换对应的生命周期**
 

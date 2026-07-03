@@ -34,7 +34,7 @@ networkType | string | 网络类型。可能值：<br>- `none`：无网络<br>- 
 调用示例：
 
 ```js
-tt.getNetworkType({ 
+tt.getNetworkType({
     success(res) {
       console.log(JSON.stringify(res));
     },

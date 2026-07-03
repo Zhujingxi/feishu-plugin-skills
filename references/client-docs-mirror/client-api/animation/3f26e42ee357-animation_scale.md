@@ -23,7 +23,7 @@ sy | number | 否 | / | 在 Y 轴缩放 sy 倍数
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

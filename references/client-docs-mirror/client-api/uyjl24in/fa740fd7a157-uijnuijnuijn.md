@@ -45,7 +45,7 @@ button-hover 的样式为 `{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}
 |text|文字按钮 (**目前仅PC支持**)|
 
 **shape 属性**
-**目前仅PC支持** 
+**目前仅PC支持**
 
 |值|说明|
 |--|--|
@@ -114,7 +114,7 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
-    ...iButton 
+    ...iButton
   },
   setDisabled: function(e) {
     this.setData({

@@ -119,16 +119,16 @@ KAMessage *msg = [[KAMessage alloc] initWithType:KAMessageTypeFile body:fileBody
 ```
 
 #### 属性列表
-| 属性名 | 类型 | 描述 | 
-| --- | --- | --- | 
-| type | enum KAMessageType | 消息类型 | 
-| body | id <KAMessageBodyProtocol> _Nonnull | 消息体 | 
+| 属性名 | 类型 | 描述 |
+| --- | --- | --- |
+| type | enum KAMessageType | 消息类型 |
+| body | id <KAMessageBodyProtocol> _Nonnull | 消息体 |
 
 #### 方法列表
 #### `- (nonnull instancetype)initWithType:(enum KAMessageType)type body:(id <KAMessageBodyProtocol> _Nonnull)body`
 构造函数
 
-| 参数名称 |  类型 | 描述 | 
+| 参数名称 |  类型 | 描述 |
 | --- | --- | --- |
 | type | enum KAMessageType | 消息类型 |
 | body | id <KAMessageBodyProtocol> _Nonnull | 消息体 |
@@ -152,7 +152,7 @@ KAMessage *msg = [[KAMessage alloc] initWithType:KAMessageTypeFile body:fileBody
 ```
 
 #### 属性列表
-| 属性名 | 类型 | 描述 | 
+| 属性名 | 类型 | 描述 |
 | --- | --- | --- |
 | type | enum KAMessageInfoType | 消息类型 |
 | key | NSString * _Nonnull | 消息标识 |
@@ -166,7 +166,7 @@ KAMessage *msg = [[KAMessage alloc] initWithType:KAMessageTypeFile body:fileBody
 #### `- (nonnull instancetype)initWithType:(enum KAMessageInfoType)type key:(NSString * _Nonnull)key messageID:(NSString * _Nonnull)messageID channelID:(NSString * _Nonnull)channelID name:(NSString * _Nonnull)name size:(uint64_t)size mime:(NSString * _Nonnull)mime`
 构造函数
 
-| 参数名称 |  类型 | 描述 | 
+| 参数名称 |  类型 | 描述 |
 | --- | --- | --- |
 | type | enum KAMessageInfoType | 消息类型 |
 | key | NSString * _Nonnull | 消息标识 |
@@ -188,7 +188,7 @@ KAMessage *msg = [[KAMessage alloc] initWithType:KAMessageTypeFile body:fileBody
 ```
 
 #### 属性列表
-| 属性名 | 类型 | 描述 | 
+| 属性名 | 类型 | 描述 |
 | --- | --- | --- |
 | messageNavigator | id <KAMessageNavigator> _Nullable | 消息能力接口实例 |
 

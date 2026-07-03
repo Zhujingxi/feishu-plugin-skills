@@ -41,7 +41,7 @@ id<KAMessageNavigator> navigator = api.messageNavigator;
 
 ### **property messageNavigator**
 
-消息能力接口实例 
+消息能力接口实例
 ```cpp
 id< KAMessageNavigator > _Nullable messageNavigator;
 ```
@@ -50,7 +50,7 @@ id< KAMessageNavigator > _Nullable messageNavigator;
 
 ## KAMessage
 
-发送的消息 
+发送的消息
 `#include <interface_LKMessageExternal-Swift.h>`
 
 Inherits from NSObject
@@ -70,7 +70,7 @@ Inherits from NSObject
 
 ### **function initWithType:body:**
 
-构造函数 
+构造函数
 
 ```cpp
 virtual nonnull instancetype initWithType:body:(
@@ -79,10 +79,10 @@ virtual nonnull instancetype initWithType:body:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **type** 消息类型
-  * **body** 消息体 
+  * **body** 消息体
 
 ### **function SWIFT_UNAVAILABLE**
 
@@ -98,14 +98,14 @@ static virtual "-init is unavailable" SWIFT_UNAVAILABLE_MSG()
 
 ### **property type**
 
-消息类型 
+消息类型
 ```cpp
 enum KAMessageType type;
 ```
 
 ### **property body**
 
-消息体 
+消息体
 ```cpp
 id< KAMessageBodyProtocol > _Nonnull body;
 ```
@@ -114,7 +114,7 @@ id< KAMessageBodyProtocol > _Nonnull body;
 
 ## MessageInfo
 
-消息描述 
+消息描述
 `#include <interface_LKMessageExternal-Swift.h>`
 
 Inherits from NSObject
@@ -139,7 +139,7 @@ Inherits from NSObject
 
 ### **function initWithType:key:messageID:channelID:name:size:mime:**
 
-构造函数 
+构造函数
 
 ```cpp
 virtual nonnull instancetype initWithType:key:messageID:channelID:name:size:mime:(
@@ -153,7 +153,7 @@ virtual nonnull instancetype initWithType:key:messageID:channelID:name:size:mime
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **type** 消息类型
   * **key** 消息标识
@@ -161,7 +161,7 @@ virtual nonnull instancetype initWithType:key:messageID:channelID:name:size:mime
   * **channelID** 消息 channel
   * **name** 消息名
   * **size** 消息大小
-  * **mime** 消息拓展 
+  * **mime** 消息拓展
 
 ### **function SWIFT_UNAVAILABLE**
 
@@ -177,49 +177,49 @@ static virtual "-init is unavailable" SWIFT_UNAVAILABLE_MSG()
 
 ### **property type**
 
-消息类型 
+消息类型
 ```cpp
 enum KAMessageInfoType type;
 ```
 
 ### **property key**
 
-消息标识 
+消息标识
 ```cpp
 NSString *_Nonnull key;
 ```
 
 ### **property messageID**
 
-消息 ID 
+消息 ID
 ```cpp
 NSString *_Nonnull messageID;
 ```
 
 ### **property channelID**
 
-消息 channel 
+消息 channel
 ```cpp
 NSString *_Nonnull channelID;
 ```
 
 ### **property name**
 
-消息名 
+消息名
 ```cpp
 NSString *_Nonnull name;
 ```
 
 ### **property size**
 
-消息大小 
+消息大小
 ```cpp
 uint64_t size;
 ```
 
 ### **property mime**
 
-消息拓展 
+消息拓展
 ```cpp
 NSString *_Nonnull mime;
 ```
@@ -228,7 +228,7 @@ NSString *_Nonnull mime;
 
 ## KAFileMessageProtocol
 
-文件消息体 Protocol 
+文件消息体 Protocol
 `#include <interface_LKMessageExternal-Swift.h>`
 
 Inherits from <KAMessageBodyProtocol>
@@ -241,7 +241,7 @@ Inherits from <KAMessageBodyProtocol>
 
 ### **property filePath**
 
-文件路径 
+文件路径
 ```cpp
 NSString *_Nonnull filePath;
 ```
@@ -250,7 +250,7 @@ NSString *_Nonnull filePath;
 
 ## KAMessageBodyProtocol
 
-消息体 Protocol 
+消息体 Protocol
 `#include <interface_LKMessageExternal-Swift.h>`
 
 Inherited by <KAFileMessageProtocol>
@@ -259,7 +259,7 @@ Inherited by <KAFileMessageProtocol>
 
 ## KAMessageNavigator
 
-消息能力接口协议 
+消息能力接口协议
 `#include <interface_LKMessageExternal-Swift.h>`
 
 |        类型     | 定义名称           |
@@ -270,7 +270,7 @@ Inherited by <KAFileMessageProtocol>
 
 ### **function forwardWithMessage:**
 
-转发消息 
+转发消息
 
 ```cpp
 virtual void forwardWithMessage:(
@@ -278,13 +278,13 @@ virtual void forwardWithMessage:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
-* **message** 待转发的消息 
+* **message** 待转发的消息
 
 ### **function getResourcesWithMessages:onSuccess:onError:**
 
-获取消息资源 
+获取消息资源
 
 ```cpp
 virtual void getResourcesWithMessages:onSuccess:onError:(
@@ -294,15 +294,15 @@ virtual void getResourcesWithMessages:onSuccess:onError:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **messages** 消息描述
   * **onSuccess** 获取消息成功后的回调函数
-  * **onError** 获取消息失败后的回调函数 
+  * **onError** 获取消息失败后的回调函数
 
 ### **function downloadResourceWithMessageInfo:onSuccess:onError:**
 
-下载消息资源 
+下载消息资源
 
 ```cpp
 virtual void downloadResourceWithMessageInfo:onSuccess:onError:(
@@ -312,10 +312,10 @@ virtual void downloadResourceWithMessageInfo:onSuccess:onError:(
 )
 ```
 
-**Parameters**: 
+**Parameters**:
 
 * **messageInfo** 消息描述
   * **onSuccess** 下载成功后的回调函数
-  * **onError** 下载失败后的回调函数 
+  * **onError** 下载失败后的回调函数
 
 -------------------------------

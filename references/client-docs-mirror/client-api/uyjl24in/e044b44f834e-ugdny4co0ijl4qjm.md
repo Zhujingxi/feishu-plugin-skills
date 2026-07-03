@@ -66,7 +66,7 @@ tt.showModal({
     "confirm": true,
     "cancel": false
 }
-``` 
+```
 
 ## 错误码
 

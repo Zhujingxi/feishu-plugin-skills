@@ -40,7 +40,7 @@ picture | string[] | 图片地址列表，目前只支持传入一个图片
 
 ```js
 //customizedInput通过tt.getCustomizedInput()获取，并且和show方法公用一个对象实例
-customizedInput.onModelSelect({ 
+customizedInput.onModelSelect({
     success(res) {
       console.log(JSON.stringify(res));
     },

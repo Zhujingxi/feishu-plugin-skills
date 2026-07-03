@@ -63,7 +63,7 @@ tt.connectBLEDevice({
   "errMsg": "connectBLEDevice:ok",
   "innerMsg": "ok"
 }
-``` 
+```
 
 ## 错误码
 

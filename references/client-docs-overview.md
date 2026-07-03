@@ -10,7 +10,8 @@ The current refresh used the official Open Platform documentation directory endp
 - Seed page: `https://open.feishu.cn/document/client-docs/intro`
 - Indexed roots: Developer Guides and Client API
 - Pages discovered in those roots: 1,805
-- Markdown pages fetched during the crawl before the network pass was stopped: 1,684
+- Markdown pages mirrored locally: 1,793
+- Pages that failed during the latest crawl: 12
 - Full generated index: `references/client-docs-source-catalog.md`
 - Machine-readable mirror index: `references/client-docs-mirror-index.json`
 - Mirrored markdown root: `references/client-docs-mirror/`
@@ -67,6 +68,46 @@ Client API roots include:
 4. Use the mirrored markdown for local lookup, then verify exact CLI package, generated template structure, app capability name, permission scope, and source domain in live official docs before production release.
 5. For every frontend/plugin surface, draw a hard line between client bundle and backend: app secrets, token exchange, privileged OpenAPI calls, and long-lived tokens stay backend-side.
 6. Verify in a real tenant and product surface before handing off.
+
+
+## Local search recipes for coding agents
+
+Use the mirrored markdown as a local documentation store, not as a blob to load all at once. Start with a narrow text search, then read only the best one to three matching files. Examples from the repository root:
+
+```bash
+# H5 JSAPI authentication and signatures
+rg -ni "h5sdk.config|jsapi_ticket|signature|tenant_access_token|user_access_token" references/client-docs-mirror
+
+# Base/Bitable extensions and automation actions
+rg -ni "base extension|bitable|table view|record view|automation action|opdev|basekit" references/client-docs-mirror references/client-docs-source-catalog.md
+
+# Docs add-on and document widget APIs
+rg -ni "docs add-on|document widget|block.insertBlock|selection|viewport|bridge" references/client-docs-mirror references/client-docs-source-catalog.md
+
+# Workplace Block and block runtime APIs
+rg -ni "workplace block|hosting scenario|block runtime|block api|storage|navigation" references/client-docs-mirror references/client-docs-source-catalog.md
+
+# Locate a local mirror file from an official URL or source fragment
+python - <<'PY'
+import json
+from pathlib import Path
+needle = "base-table-view-extension-development-guide"
+idx = json.loads(Path("references/client-docs-mirror-index.json").read_text())
+for page in idx["pages"]:
+    if needle.lower() in (page["source"] + " " + page["path"]).lower():
+        print(page["source"], "->", "references/" + page["path"])
+PY
+```
+
+Search alias hints:
+
+- Base/Bitable extension: `Base`, `Bitable`, `base extension`, `bitable extension`, `table view`, `record view`, `automation action`, `opdev`, `basekit`.
+- Docs add-on/document widget: `Docs add-on`, `document widget`, `cloud document block`, `block`, `selection`, `viewport`, `bridge`.
+- Workplace Block/widget: `Workplace Block`, `workplace widget`, `hosting scenario`, `block runtime`, `open capability`, `storage`, `navigation`.
+- Web App/H5: `H5`, `Web App`, `JSAPI`, `h5sdk.config`, `login`, `signature`, `jsapi_ticket`, `config`.
+- Cards and link preview: `CardKit`, `card JSON`, `message card`, `link preview`, `callback`, `template`.
+
+If the user uses Feishu or Lark product terms in another language, search both the English surface name above and the exact product/API identifier from the user's code or error message. The local mirror preserves official source language, while authored skill guidance stays in English.
 
 ## Official source anchors
 

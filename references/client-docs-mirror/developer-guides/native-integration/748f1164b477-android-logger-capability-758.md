@@ -58,7 +58,7 @@ interface ILoggerApi {
 
 #### 方法列表
 #### `void v(String tag, String msg)`
-打印 verbose 日志  
+打印 verbose 日志
 注意该级别的日志在 Release 包中可能被移除
 
 | 参数名称 | 类型 | 必填 | 描述 |
@@ -67,7 +67,7 @@ interface ILoggerApi {
 | msg | String | 是 | 日志内容 |
 
 #### `void d(String tag, String msg)`
-打印 debug 日志  
+打印 debug 日志
 注意该级别的日志在 Release 包中可能被移除
 
 | 参数名称 | 类型 | 必填 | 描述 |

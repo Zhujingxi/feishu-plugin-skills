@@ -34,7 +34,7 @@ networkQualityType | string | 网络分级类型。可能值：<br>- `unavailabl
 调用示例：
 
 ```js
-tt.getNetworkQualityType({ 
+tt.getNetworkQualityType({
     success(res) {
       console.log(JSON.stringify(res));
     },

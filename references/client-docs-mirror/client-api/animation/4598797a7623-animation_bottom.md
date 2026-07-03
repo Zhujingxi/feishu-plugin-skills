@@ -23,7 +23,7 @@ value | number | string | 是 | / | 长度值，如果传入 number 则默认使
 
 ## 输出
 
-返回值：  
+返回值：
 
 `Animation` 实例
 

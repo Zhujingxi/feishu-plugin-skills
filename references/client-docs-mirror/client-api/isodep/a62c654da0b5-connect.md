@@ -40,8 +40,8 @@ adapter.onDiscovered(
                 fail(err) {
                     console.log(`IsoDep.connect fail: ${JSON.stringify(res)}`)
                 }
-            });   
-        }   
+            });
+        }
     }
 );
 ```

@@ -30,7 +30,7 @@ data | object | 权限申请结果
 ## 示例代码
 
 ```js
-tt.applyTenantAppScope({ 
+tt.applyTenantAppScope({
     success(res) {
       console.log(JSON.stringify(res));
     },

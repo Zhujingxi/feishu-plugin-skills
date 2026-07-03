@@ -46,7 +46,7 @@ tt.startBeaconDiscovery({
     ignoreBluetoothAvailable: true,
     success(res) {
       tt.onBeaconUpdate(function(res) {
-        console.log(JSON.stringify(res));	
+        console.log(JSON.stringify(res));
       });
     },
     fail(res) {

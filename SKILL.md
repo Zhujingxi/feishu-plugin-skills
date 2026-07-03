@@ -274,6 +274,22 @@ lpm release
 
 Before `lpm start`, enable local debugging in the Feishu Project plugin detail page. Route protected Project OpenAPI calls through a backend, use HTTPS for external APIs, and verify the released version in the real Feishu Project client.
 
+
+## Local Documentation Search Workflow
+
+The mirrored official docs are stored locally so coding agents do not need to rely on opening Feishu/Lark links during implementation. Do not load the whole mirror into context. Search first, then read only the relevant pages.
+
+Recommended searches from the skill root:
+
+```bash
+rg -ni "h5sdk.config|jsapi_ticket|signature|login" references/client-docs-mirror
+rg -ni "base extension|bitable|table view|record view|automation action|opdev" references/client-docs-mirror references/client-docs-source-catalog.md
+rg -ni "docs add-on|document widget|selection|viewport|bridge" references/client-docs-mirror references/client-docs-source-catalog.md
+rg -ni "workplace block|block runtime|open capability|storage|navigation" references/client-docs-mirror references/client-docs-source-catalog.md
+```
+
+Use `references/client-docs-mirror-index.json` when you need source URL to local-file lookup. Use `references/client-docs-overview.md` for search aliases and the surface map.
+
 ## Debugging Playbook
 
 - Wrong surface: if the work is just CRUD/import/export/sync, switch to server APIs. If a persistent in-client UI is required, pick Base, Docs, Workplace, H5, Cards, Link Preview, or Project explicitly.
@@ -292,7 +308,7 @@ A Feishu/Lark implementation or skill update is not ready until the relevant che
 - Confirm Feishu China vs Lark international environment and domains.
 - Confirm frontmatter stays valid and support files remain under allowed directories such as `references/`, `templates/`, `scripts/`, or `assets/`.
 - Confirm no secrets, tokens, private keys, tenant/user identifiers, or raw PII were added to persisted skill artifacts.
-- Confirm persisted skill/repo artifacts remain English-only.
+- Confirm authored skill/repo guidance remains English-only; generated upstream documentation mirrors may preserve the source language and must stay under `references/client-docs-mirror/`.
 - Confirm the main `SKILL.md` remains a self-contained coding-agent guide: principles, prerequisites, classification, common workflows, and quick checks. Put exhaustive catalogs, mirrored upstream docs, and long source inventories in `references/`.
 - For generic open-agent distribution, verify from the repo root:
 
@@ -331,10 +347,10 @@ Use `npx skills add Zhujingxi/feishu-plugin-skills --list` to inspect the packag
 - Use `references/client-docs-overview.md` for the latest organized crawl of official Developer Guides and Client API pages.
 - Use `references/client-docs-source-catalog.md` to map official pages to mirrored local markdown files.
 - Use `references/client-docs-mirror-index.json` for machine-readable source URL -> local file lookup.
-- Use `references/client-docs-mirror/` for mirrored official markdown page content when live documentation access is unreliable.
+- Use `references/client-docs-mirror/` for mirrored official markdown page content when live documentation access is unreliable. Search it narrowly with `rg` first, then read only the matching files needed for the task.
 - To refresh the generated catalog and mirror, run `python scripts/crawl_client_docs.py` from the skill root and then re-run the verification checklist.
 - The mirror stores official page content for local search/access. Still re-check live docs before production release when exact current API parameters, CLI templates, or console labels are high-risk.
-- Persisted skill artifacts must remain English-only. If upstream paths or titles contain CJK or other non-ASCII text, percent-encode URL/path segments or use escaped string literals in scripts.
+- Authored skill artifacts must remain English-only. Generated upstream documentation mirrors may preserve source-language content under `references/client-docs-mirror/`; generated catalogs and scripts should keep ASCII-safe paths and English headings.
 - When the touched code has no canonical test suite, create a focused temporary verifier with an OS-safe `tempfile` path under the platform temp directory and a `hermes-verify-` prefix. Verify syntax, generated output invariants, determinism when applicable, English-only persisted output, and `git diff --check`; remove the verifier after the run and report it as ad-hoc verification.
 - Use the module-specific reference from the `Feishu/Lark Module Index` instead of loading unrelated material.
 - `references/implementation-details.md` remains as a compatibility index for older instructions that expected one implementation-details file.
